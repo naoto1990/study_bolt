@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		E70377121F3C41F500050770 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70377111F3C41F500050770 /* AppDelegate.swift */; };
-		E70377141F3C41F500050770 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70377131F3C41F500050770 /* ViewController.swift */; };
 		E70377171F3C41F500050770 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70377151F3C41F500050770 /* Main.storyboard */; };
 		E703771A1F3C41F600050770 /* studyBolt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E70377181F3C41F600050770 /* studyBolt.xcdatamodeld */; };
 		E703771C1F3C41F600050770 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E703771B1F3C41F600050770 /* Assets.xcassets */; };
 		E703771F1F3C41F600050770 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E703771D1F3C41F600050770 /* LaunchScreen.storyboard */; };
 		E703772A1F3C41F600050770 /* studyBoltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70377291F3C41F600050770 /* studyBoltTests.swift */; };
 		E70377351F3C41F600050770 /* studyBoltUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70377341F3C41F600050770 /* studyBoltUITests.swift */; };
+		E70377441F3C463300050770 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70377431F3C463300050770 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,6 @@
 /* Begin PBXFileReference section */
 		E703770E1F3C41F500050770 /* studyBolt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = studyBolt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E70377111F3C41F500050770 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E70377131F3C41F500050770 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E70377161F3C41F500050770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E70377191F3C41F600050770 /* studyBolt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = studyBolt.xcdatamodel; sourceTree = "<group>"; };
 		E703771B1F3C41F600050770 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		E70377301F3C41F600050770 /* studyBoltUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = studyBoltUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E70377341F3C41F600050770 /* studyBoltUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = studyBoltUITests.swift; sourceTree = "<group>"; };
 		E70377361F3C41F600050770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E70377431F3C463300050770 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +99,8 @@
 		E70377101F3C41F500050770 /* studyBolt */ = {
 			isa = PBXGroup;
 			children = (
+				E70377421F3C45F300050770 /* ViewController */,
 				E70377111F3C41F500050770 /* AppDelegate.swift */,
-				E70377131F3C41F500050770 /* ViewController.swift */,
 				E70377151F3C41F500050770 /* Main.storyboard */,
 				E703771B1F3C41F600050770 /* Assets.xcassets */,
 				E703771D1F3C41F600050770 /* LaunchScreen.storyboard */,
@@ -126,6 +126,14 @@
 				E70377361F3C41F600050770 /* Info.plist */,
 			);
 			path = studyBoltUITests;
+			sourceTree = "<group>";
+		};
+		E70377421F3C45F300050770 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E70377431F3C463300050770 /* HomeViewController.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +270,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E70377141F3C41F500050770 /* ViewController.swift in Sources */,
 				E703771A1F3C41F600050770 /* studyBolt.xcdatamodeld in Sources */,
 				E70377121F3C41F500050770 /* AppDelegate.swift in Sources */,
+				E70377441F3C463300050770 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
