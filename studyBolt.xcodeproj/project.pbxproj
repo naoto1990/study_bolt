@@ -15,6 +15,7 @@
 		E703772A1F3C41F600050770 /* studyBoltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70377291F3C41F600050770 /* studyBoltTests.swift */; };
 		E70377351F3C41F600050770 /* studyBoltUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70377341F3C41F600050770 /* studyBoltUITests.swift */; };
 		E70377441F3C463300050770 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70377431F3C463300050770 /* HomeViewController.swift */; };
+		E70377471F4582ED00050770 /* StudySetsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70377461F4582ED00050770 /* StudySetsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E70377341F3C41F600050770 /* studyBoltUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = studyBoltUITests.swift; sourceTree = "<group>"; };
 		E70377361F3C41F600050770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E70377431F3C463300050770 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E70377461F4582ED00050770 /* StudySetsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudySetsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		E70377101F3C41F500050770 /* studyBolt */ = {
 			isa = PBXGroup;
 			children = (
+				E70377451F45828D00050770 /* Views */,
 				E70377421F3C45F300050770 /* ViewController */,
 				E70377111F3C41F500050770 /* AppDelegate.swift */,
 				E70377151F3C41F500050770 /* Main.storyboard */,
@@ -134,6 +137,14 @@
 				E70377431F3C463300050770 /* HomeViewController.swift */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		E70377451F45828D00050770 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E70377461F4582ED00050770 /* StudySetsCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +283,7 @@
 			files = (
 				E703771A1F3C41F600050770 /* studyBolt.xcdatamodeld in Sources */,
 				E70377121F3C41F500050770 /* AppDelegate.swift in Sources */,
+				E70377471F4582ED00050770 /* StudySetsCell.swift in Sources */,
 				E70377441F3C463300050770 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

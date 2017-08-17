@@ -9,27 +9,53 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    let testCards = ["1", "2", "3"]
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.estimatedRowHeight = 150
+        self.tableView.rowHeight = UITableViewAutomaticDimension
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
-    /*
-    // MARK: - Navigation
+    
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+}
+
+
+extension HomeViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return testCards.count
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "studySetsCell") as! StudySetsCell
+        
+        cell.titleLabel.text = "テスト"
+        cell.numOfCardsLabel.text = "23"
+        
+        return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+}
+
+
+extension HomeViewController: UITableViewDelegate {
+
 
 }
