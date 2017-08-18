@@ -19,9 +19,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.estimatedRowHeight = 150
-        self.tableView.rowHeight = UITableViewAutomaticDimension
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,6 +53,8 @@ extension HomeViewController: UITableViewDataSource {
 
 
 extension HomeViewController: UITableViewDelegate {
-
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
+    }
 
 }
