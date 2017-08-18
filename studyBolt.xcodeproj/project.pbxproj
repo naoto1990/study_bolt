@@ -17,6 +17,7 @@
 		E70377441F3C463300050770 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70377431F3C463300050770 /* HomeViewController.swift */; };
 		E70377471F4582ED00050770 /* StudySetsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70377461F4582ED00050770 /* StudySetsCell.swift */; };
 		E703774E1F46CDB100050770 /* testDeck.json in Resources */ = {isa = PBXBuildFile; fileRef = E703774D1F46CDB100050770 /* testDeck.json */; };
+		E70377501F46E7B700050770 /* testDeck.json in Resources */ = {isa = PBXBuildFile; fileRef = E703774D1F46CDB100050770 /* testDeck.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		E70377101F3C41F500050770 /* studyBolt */ = {
 			isa = PBXGroup;
 			children = (
+				E703774F1F46DB4900050770 /* Models */,
 				E70377451F45828D00050770 /* Views */,
 				E70377421F3C45F300050770 /* ViewController */,
 				E70377111F3C41F500050770 /* AppDelegate.swift */,
@@ -156,6 +158,14 @@
 				E703774D1F46CDB100050770 /* testDeck.json */,
 			);
 			name = testData;
+			path = studyBoltTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		E703774F1F46DB4900050770 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E70377501F46E7B700050770 /* testDeck.json in Resources */,
 				E703771F1F3C41F600050770 /* LaunchScreen.storyboard in Resources */,
 				E703771C1F3C41F600050770 /* Assets.xcassets in Resources */,
 				E70377171F3C41F500050770 /* Main.storyboard in Resources */,
@@ -543,6 +554,7 @@
 				E703773B1F3C41F600050770 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E703773C1F3C41F600050770 /* Build configuration list for PBXNativeTarget "studyBoltTests" */ = {
 			isa = XCConfigurationList;
@@ -551,6 +563,7 @@
 				E703773E1F3C41F600050770 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E703773F1F3C41F600050770 /* Build configuration list for PBXNativeTarget "studyBoltUITests" */ = {
 			isa = XCConfigurationList;
@@ -559,6 +572,7 @@
 				E70377411F3C41F600050770 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
