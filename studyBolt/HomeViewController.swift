@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import Foundation
+
 
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
     let testCards = ["1", "2", "3"]
-    
+    var testDecks: Any?
     
     
     override func viewDidLoad() {
@@ -21,12 +23,36 @@ class HomeViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        if let unwrappedTestDecks = jsonLoad() {
+            testDecks = unwrappedTestDecks
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    
+    func jsonLoad () -> Optional<Any> {
+        var decks: Any? = nil
+        
+        let path = Bundle.main.url(forResource: "testDeck", withExtension: "json")
+        do {
+            if path != nil {
+                let data = try Data(contentsOf: path!)
+                decks = try JSONSerialization.jsonObject(with: data, options: [])
+                
+            } else {
+                print("file not found")
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        return decks
+    }
 
     
 
