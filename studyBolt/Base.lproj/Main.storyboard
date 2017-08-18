@@ -33,36 +33,53 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeF-tf-r6f">
-                                                    <rect key="frame" x="32" y="5" width="34" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="32" y="10" width="36.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cards:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYT-Xv-9j0">
-                                                    <rect key="frame" x="32" y="22" width="50" height="21"/>
+                                                    <rect key="frame" x="32" y="50" width="50" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="numOfCards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIE-2h-0HN">
-                                                    <rect key="frame" x="110" y="22" width="98" height="21"/>
+                                                    <rect key="frame" x="102" y="50" width="98" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updated:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBn-pj-reK">
+                                                    <rect key="frame" x="157" y="50" width="71" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UpdateDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Snb-SZ-OSE">
+                                                    <rect key="frame" x="248" y="50" width="93" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="wYT-Xv-9j0" firstAttribute="leading" secondItem="pgS-bn-97T" secondAttribute="leading" constant="32" id="4mO-U6-aN0"/>
-                                                <constraint firstItem="HeF-tf-r6f" firstAttribute="top" secondItem="pgS-bn-97T" secondAttribute="top" constant="5" id="66G-5Q-yMO"/>
-                                                <constraint firstItem="fIE-2h-0HN" firstAttribute="leading" secondItem="wYT-Xv-9j0" secondAttribute="trailing" constant="28" id="Fmd-8G-R6Y"/>
-                                                <constraint firstItem="wYT-Xv-9j0" firstAttribute="top" secondItem="pgS-bn-97T" secondAttribute="top" constant="22" id="dAR-e2-93I"/>
-                                                <constraint firstItem="fIE-2h-0HN" firstAttribute="top" secondItem="pgS-bn-97T" secondAttribute="top" constant="22" id="dee-GH-aRx"/>
-                                                <constraint firstItem="HeF-tf-r6f" firstAttribute="leading" secondItem="pgS-bn-97T" secondAttribute="leading" constant="32" id="kIm-ai-hdP"/>
+                                                <constraint firstItem="fIE-2h-0HN" firstAttribute="top" secondItem="pgS-bn-97T" secondAttribute="top" constant="50" id="4tB-a5-sJa"/>
+                                                <constraint firstItem="fIE-2h-0HN" firstAttribute="leading" secondItem="wYT-Xv-9j0" secondAttribute="trailing" constant="20" id="Gwk-wB-LAm"/>
+                                                <constraint firstItem="Snb-SZ-OSE" firstAttribute="leading" secondItem="rBn-pj-reK" secondAttribute="trailing" constant="20" id="Qvh-mG-abU"/>
+                                                <constraint firstItem="wYT-Xv-9j0" firstAttribute="leading" secondItem="pgS-bn-97T" secondAttribute="leading" constant="32" id="Ssx-Ji-gSl"/>
+                                                <constraint firstItem="rBn-pj-reK" firstAttribute="leading" secondItem="wYT-Xv-9j0" secondAttribute="trailing" constant="75" id="g2R-co-l0d"/>
+                                                <constraint firstItem="rBn-pj-reK" firstAttribute="top" secondItem="pgS-bn-97T" secondAttribute="top" constant="50" id="jzV-8s-MPS"/>
+                                                <constraint firstItem="wYT-Xv-9j0" firstAttribute="top" secondItem="pgS-bn-97T" secondAttribute="top" constant="50" id="klW-vG-Y6a"/>
+                                                <constraint firstItem="HeF-tf-r6f" firstAttribute="top" secondItem="pgS-bn-97T" secondAttribute="top" constant="10" id="qvI-J0-9T4"/>
+                                                <constraint firstItem="Snb-SZ-OSE" firstAttribute="top" secondItem="pgS-bn-97T" secondAttribute="top" constant="50" id="rqI-cM-ExD"/>
+                                                <constraint firstItem="HeF-tf-r6f" firstAttribute="leading" secondItem="pgS-bn-97T" secondAttribute="leading" constant="32" id="zTN-Nw-tPM"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="numOfCardsLabel" destination="fIE-2h-0HN" id="JbS-Qo-vKO"/>
                                             <outlet property="titleLabel" destination="HeF-tf-r6f" id="ff8-VC-mHY"/>
+                                            <outlet property="updateDateLabel" destination="Snb-SZ-OSE" id="gXV-Va-vgd"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -89,7 +106,7 @@
                             <constraint firstItem="Djj-Nd-LTG" firstAttribute="top" secondItem="eZg-K7-Enk" secondAttribute="bottom" id="znK-0W-Te3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="1Hj-TA-2dT" userLabel="Home"/>
+                    <navigationItem key="navigationItem" title="Home" id="1Hj-TA-2dT" userLabel="Home"/>
                     <connections>
                         <outlet property="tableView" destination="KIZ-IM-5rE" id="h8V-K2-r1r"/>
                     </connections>

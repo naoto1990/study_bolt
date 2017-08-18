@@ -44,6 +44,7 @@ extension HomeViewController: UITableViewDataSource {
         
         cell.titleLabel.text = "テスト"
         cell.numOfCardsLabel.text = "23"
+        cell.updateDateLabel.text = "08/18/2017"
         
         return cell
     }

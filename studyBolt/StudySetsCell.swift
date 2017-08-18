@@ -12,6 +12,7 @@ class StudySetsCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var numOfCardsLabel: UILabel!
+    @IBOutlet weak var updateDateLabel: UILabel!
 
     
 

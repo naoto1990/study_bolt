@@ -16,6 +16,7 @@
 		E70377351F3C41F600050770 /* studyBoltUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70377341F3C41F600050770 /* studyBoltUITests.swift */; };
 		E70377441F3C463300050770 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70377431F3C463300050770 /* HomeViewController.swift */; };
 		E70377471F4582ED00050770 /* StudySetsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70377461F4582ED00050770 /* StudySetsCell.swift */; };
+		E703774E1F46CDB100050770 /* testDeck.json in Resources */ = {isa = PBXBuildFile; fileRef = E703774D1F46CDB100050770 /* testDeck.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		E70377361F3C41F600050770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E70377431F3C463300050770 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E70377461F4582ED00050770 /* StudySetsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudySetsCell.swift; sourceTree = "<group>"; };
+		E703774D1F46CDB100050770 /* testDeck.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testDeck.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		E70377281F3C41F600050770 /* studyBoltTests */ = {
 			isa = PBXGroup;
 			children = (
+				E703774A1F46C72B00050770 /* testData */,
 				E70377291F3C41F600050770 /* studyBoltTests.swift */,
 				E703772B1F3C41F600050770 /* Info.plist */,
 			);
@@ -145,6 +148,14 @@
 				E70377461F4582ED00050770 /* StudySetsCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		E703774A1F46C72B00050770 /* testData */ = {
+			isa = PBXGroup;
+			children = (
+				E703774D1F46CDB100050770 /* testDeck.json */,
+			);
+			name = testData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E703774E1F46CDB100050770 /* testDeck.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
