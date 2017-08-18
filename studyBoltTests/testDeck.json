@@ -1,0 +1,36 @@
+{
+  "decks": [
+    {
+      "title": "world history",
+      "updateDate": "08/18/2017",
+      "cards": [
+        {
+          "flipSide": "WW2",
+          "backSide": "It ends at 1945"
+        }
+      ]
+    },
+    {
+      "title": "English",
+      "updateDate": "08/18/2017",
+      "cards": [
+        {
+          "flipSide": "profound",
+          "backSide": "(of a state, quality, or emotion) very great or intense"
+        },
+        {
+          "flipSide": "substance",
+          "backSide": "that of which a thing consists; physical matter or material"
+        },
+        {
+          "flipSide": "rigrous",
+          "backSide": "extremely thorough and careful"
+        },
+        {
+          "flipSide": "eminet",
+          "backSide": "high in station, rank, or repute; prominent; distinguished"
+        }
+      ]
+    },
+  ]
+}
