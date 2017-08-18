@@ -19,6 +19,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
