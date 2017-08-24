@@ -169,7 +169,7 @@
         <!--Create Set-->
         <scene sceneID="nhH-K5-jah">
             <objects>
-                <viewController id="b2a-cd-7ko" sceneMemberID="viewController">
+                <viewController id="b2a-cd-7ko" customClass="CreateSetViewController" customModule="studyBolt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tZJ-CE-oEK"/>
                         <viewControllerLayoutGuide type="bottom" id="b0r-b5-jx7"/>
@@ -177,13 +177,59 @@
                     <view key="view" contentMode="scaleToFill" id="yJT-vj-Xgh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GHY-qc-IqP">
+                                <rect key="frame" x="80" y="139" width="215" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Term" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AFg-IE-neB">
+                                <rect key="frame" x="80" y="213" width="215" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Descrption" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tq9-CR-VEk">
+                                <rect key="frame" x="80" y="287" width="215" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POE-cP-3Wb">
+                                <rect key="frame" x="165" y="387" width="45" height="30"/>
+                                <state key="normal" title="create"/>
+                                <connections>
+                                    <action selector="createDemoSet:" destination="b2a-cd-7ko" eventType="touchUpInside" id="iP8-QH-ukg"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tq9-CR-VEk" firstAttribute="leading" secondItem="yJT-vj-Xgh" secondAttribute="leading" constant="80" id="0zc-2M-qzD"/>
+                            <constraint firstItem="GHY-qc-IqP" firstAttribute="top" secondItem="tZJ-CE-oEK" secondAttribute="bottom" constant="75" id="4II-a2-Tru"/>
+                            <constraint firstItem="GHY-qc-IqP" firstAttribute="leading" secondItem="yJT-vj-Xgh" secondAttribute="leading" constant="80" id="K9z-Hj-yMf"/>
+                            <constraint firstAttribute="trailing" secondItem="tq9-CR-VEk" secondAttribute="trailing" constant="80" id="V3C-SF-5Zs"/>
+                            <constraint firstAttribute="trailing" secondItem="AFg-IE-neB" secondAttribute="trailing" constant="80" id="W53-B2-Ihg"/>
+                            <constraint firstItem="tq9-CR-VEk" firstAttribute="top" secondItem="AFg-IE-neB" secondAttribute="bottom" constant="44" id="W5A-T5-xyI"/>
+                            <constraint firstItem="POE-cP-3Wb" firstAttribute="leading" secondItem="yJT-vj-Xgh" secondAttribute="leading" constant="165" id="c7v-sT-XRx"/>
+                            <constraint firstItem="POE-cP-3Wb" firstAttribute="top" secondItem="tq9-CR-VEk" secondAttribute="bottom" constant="70" id="cje-1l-XFF"/>
+                            <constraint firstItem="AFg-IE-neB" firstAttribute="top" secondItem="GHY-qc-IqP" secondAttribute="bottom" constant="44" id="hQj-xU-URK"/>
+                            <constraint firstAttribute="trailing" secondItem="GHY-qc-IqP" secondAttribute="trailing" constant="80" id="o2m-ds-Nqn"/>
+                            <constraint firstItem="AFg-IE-neB" firstAttribute="leading" secondItem="yJT-vj-Xgh" secondAttribute="leading" constant="80" id="wkZ-cC-rQK"/>
+                            <constraint firstAttribute="trailing" secondItem="POE-cP-3Wb" secondAttribute="trailing" constant="165" id="wpF-KB-JQb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create Set" id="k4Q-0S-qrw"/>
+                    <connections>
+                        <outlet property="demoDefinition" destination="tq9-CR-VEk" id="TG9-6o-6uJ"/>
+                        <outlet property="demoTerm" destination="AFg-IE-neB" id="67e-aS-11C"/>
+                        <outlet property="demoTitle" destination="GHY-qc-IqP" id="mzx-Mg-fPn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rsH-Zv-76P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1978" y="-240"/>
+            <point key="canvasLocation" x="1975.2" y="-239.73013493253376"/>
         </scene>
         <!--Explore-->
         <scene sceneID="BBk-9D-bmh">

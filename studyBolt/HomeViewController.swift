@@ -8,11 +8,16 @@
 
 import UIKit
 import Foundation
+import RealmSwift
 
 
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    
+    let realm = try! Realm()
+    
+    var studySetsObject = List()
     
     let testCards = ["1", "2", "3"]
     
@@ -24,12 +29,19 @@ class HomeViewController: UIViewController {
         tableView.dataSource = self
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
     }
 
+    func createDemoData() {
+        
+    }
     
 
 }
@@ -38,15 +50,21 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return testCards.count
+        let studySets = realm.objects(StudySet.self)
+        
+        // demoデータの総数を返却
+        return studySets.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "studySetsCell") as! StudySetsCell
         
-        cell.titleLabel.text = "テスト"
+        let studySets = realm.objects(StudySet.self)
+        
+        let studySet = studySets[indexPath.row]
+        cell.titleLabel.text = studySet.title
         cell.numOfCardsLabel.text = "23"
-        cell.updateDateLabel.text = "08/18/2017"
+        cell.updateDateLabel.text = studySet.createdAt
         
         return cell
     }
