@@ -10,8 +10,8 @@ import UIKit
 import RealmSwift
 
 class StudySet: Object {
-    dynamic var title: String?
-    dynamic var studySetID: String?
-    dynamic var createdAt: String?
+    dynamic var title = String()
+    dynamic var studySetID = String()
+    dynamic var createdAt = String()
     
 }
