@@ -17,9 +17,6 @@ class HomeViewController: UIViewController {
     
     let realm = try! Realm()
     
-    var studySetsObject = List()
-    
-    let testCards = ["1", "2", "3"]
     var studySetCollection: Results<StudySet>!
     
     
