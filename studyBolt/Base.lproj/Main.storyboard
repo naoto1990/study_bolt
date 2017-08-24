@@ -166,10 +166,10 @@
             </objects>
             <point key="canvasLocation" x="1044" y="513"/>
         </scene>
-        <!--Title-->
+        <!--Create set-->
         <scene sceneID="nhH-K5-jah">
             <objects>
-                <viewController id="b2a-cd-7ko" customClass="CreateSetViewController" customModule="studyBolt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="b2a-cd-7ko" userLabel="Create set" customClass="CreateSetViewController" customModule="studyBolt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tZJ-CE-oEK"/>
                         <viewControllerLayoutGuide type="bottom" id="b0r-b5-jx7"/>
@@ -337,9 +337,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addCardView0" destination="Pg4-ff-vYJ" id="ERm-3O-NoG"/>
-                        <outlet property="addCardView1" destination="nSW-gG-DJw" id="rOy-m5-MOT"/>
-                        <outlet property="addCardView2" destination="Gmo-Lr-z6D" id="wnu-JU-hSf"/>
+                        <outlet property="addCardView0" destination="Pg4-ff-vYJ" id="NZn-lw-pwm"/>
+                        <outlet property="addCardView1" destination="nSW-gG-DJw" id="Sj0-9t-S8z"/>
+                        <outlet property="addCardView2" destination="Gmo-Lr-z6D" id="adU-QB-K1f"/>
                         <outlet property="scrollView" destination="cTS-aR-c3G" id="Cnw-ms-UNa"/>
                         <outlet property="titleTextField" destination="GHY-qc-IqP" id="Jnb-bQ-d3c"/>
                     </connections>
