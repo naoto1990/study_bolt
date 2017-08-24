@@ -11,17 +11,16 @@ import RealmSwift
 
 class CreateSetViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var demoTitle: UITextField!
-    @IBOutlet weak var demoTerm: UITextField!
-    @IBOutlet weak var demoDefinition: UITextField!
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var addCardView0: UIView!
+    @IBOutlet weak var addCardView1: UIView!
+    @IBOutlet weak var addCardView2: UIView!
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        demoTitle.delegate = self
-        demoTerm.delegate = self
-        demoDefinition.delegate = self
         
     }
 
@@ -30,11 +29,11 @@ class CreateSetViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    @IBAction func createDemoSet(_ sender: Any) {
+    @IBAction func createStudySet(_ sender: Any) {
         let realm = try! Realm()
         
         let studySet = StudySet()
-        studySet.title = demoTitle.text!
+        studySet.title = titleTextField.text!
         studySet.createdAt = getTime()
         studySet.studySetID = "a-01"
         
@@ -43,8 +42,8 @@ class CreateSetViewController: UIViewController, UITextFieldDelegate {
         }
         
         print(realm.objects(StudySet.self))
-        
     }
+    
     
     func getTime() -> String {
         let date = Date()
