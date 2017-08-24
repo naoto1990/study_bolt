@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
     var studySetsObject = List()
     
     let testCards = ["1", "2", "3"]
+    var studySetCollection: Results<StudySet>!
     
     
     override func viewDidLoad() {
@@ -27,6 +28,8 @@ class HomeViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        fetchStudySets()
         
     }
     
@@ -37,6 +40,15 @@ class HomeViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
+    }
+    
+    func fetchStudySets() {
+        do{
+            studySetCollection = realm.objects(StudySet.self)
+            tableView.reloadData()
+        }catch{
+            
+        }
     }
     
 
@@ -55,9 +67,7 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "studySetsCell") as! StudySetsCell
         
-        let studySets = realm.objects(StudySet.self)
-        
-        let studySet = studySets[indexPath.row]
+        let studySet = studySetCollection[indexPath.row]
         cell.titleLabel.text = studySet.title
         cell.numOfCardsLabel.text = "23"
         cell.updateDateLabel.text = studySet.createdAt
@@ -79,9 +89,10 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             do {
-                let studySets = realm.objects(StudySet.self)
+                let studySet = studySetCollection[indexPath.row]
+                
                 try! realm.write() {
-                    realm.delete(studySets[indexPath.row])
+                    realm.delete(studySet)
                 }
                 tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
             } catch {
