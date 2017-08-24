@@ -35,7 +35,7 @@ class CreateSetViewController: UIViewController, UITextFieldDelegate {
         
         let studySet = StudySet()
         studySet.title = demoTitle.text!
-        studySet.createdAt = "08242017"
+        studySet.createdAt = getTime()
         studySet.studySetID = "a-01"
         
         try! realm.write {
@@ -44,6 +44,14 @@ class CreateSetViewController: UIViewController, UITextFieldDelegate {
         
         print(realm.objects(StudySet.self))
         
+    }
+    
+    func getTime() -> String {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM/dd/yyyy"
+        
+        return formatter.string(from: date)
     }
     
     
