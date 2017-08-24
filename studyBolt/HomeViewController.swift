@@ -38,10 +38,6 @@ class HomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         
     }
-
-    func createDemoData() {
-        
-    }
     
 
 }
