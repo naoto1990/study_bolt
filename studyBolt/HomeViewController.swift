@@ -75,5 +75,20 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            do {
+                let studySets = realm.objects(StudySet.self)
+                try! realm.write() {
+                    realm.delete(studySets[indexPath.row])
+                }
+                tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            } catch {
+                // TODO: 例外クラスを作成し、それを返却する必要あり
+            }
+            tableView.reloadData()
+        }
+    }
 
 }
