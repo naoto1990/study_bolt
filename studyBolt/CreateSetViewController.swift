@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class CreateSetViewController: UIViewController, UITextFieldDelegate, UIScrollViewDelegate {
+class CreateSetViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -122,4 +122,30 @@ extension CreateSetViewController {
 //        scrollView.contentOffset = CGPoint(x: scrollView.frame.size.width, y: 0)
 //    }
     
+extension CreateSetViewController: UIScrollViewDelegate {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let offset = scrollView.contentOffset
+        if offset.x != scrollView.frame.size.width {
+            if offset.x == 0 {
+                cardIndex -= 1
+            } else {
+                cardIndex += 1
+            }
+            moveToCenter()
+            
+            
+            
+            if cardIndex >= cards.count {
+                cards.append(Card())
+            }
+            
+            updateTextFields()
+            
+            // Need to update locking
+            updateLocking()
+        }
+        
+        print("scrollView moved")
+    }
+}
 }
