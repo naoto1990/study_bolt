@@ -32,6 +32,7 @@ class CreateSetViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        populateDemoCards(num: 6)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -148,4 +149,21 @@ extension CreateSetViewController: UIScrollViewDelegate {
         print("scrollView moved")
     }
 }
+
+// テスト用メソッド
+extension CreateSetViewController {
+    
+    // テスト用のデモカードデータを返すメソッド
+    func populateDemoCards(num: Int) {
+        
+        for i in 1...num {
+            let demoCard = Card()
+            demoCard.studySetID = "a" + String(i)
+            demoCard.term = "aaa" + String(i)
+            demoCard.definition = "bbb" + String(i)
+            
+            cards.append(demoCard)
+        }
+        
+    }
 }
