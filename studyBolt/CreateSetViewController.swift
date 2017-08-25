@@ -27,6 +27,8 @@ class CreateSetViewController: UIViewController, UITextFieldDelegate {
         
         scrollView.delegate = self
         
+        NotificationCenter.default.addObserver(self, selector: #selector(CreateSetViewController.textFieldDidChange(_:)), name: NSNotification.Name.UITextFieldTextDidChange, object: nil)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,8 +53,9 @@ class CreateSetViewController: UIViewController, UITextFieldDelegate {
 
     func textFieldDidChange(_ notification: Notification) {
         let currentCard = cards[cardIndex]
-//        currentCard.term = addCardView1.term.text
-//        currentCard.definition = addCardView1.definitionTextField.text
+        currentCard.term = createCardView1.termTextField.text
+        currentCard.definition = createCardView1.definitionTextField.text
+        
         updateLocking()
         
     }
