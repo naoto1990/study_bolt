@@ -65,8 +65,14 @@ class CreateSetViewController: UIViewController, UITextFieldDelegate {
         studySet.createdAt = getTime()
         studySet.studySetID = "a-01"
         
+        let card = Card()
+        card.term = createCardView1.termTextField.text
+        card.definition = createCardView1.definitionTextField.text
+        card.studySetID = "a-01"
+        
         try! realm.write {
             realm.add(studySet)
+            realm.add(card)
         }
         
         print(realm.objects(StudySet.self))
