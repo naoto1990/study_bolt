@@ -23,7 +23,7 @@
 		E70377521F4E9BCF00050770 /* CreateSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70377511F4E9BCF00050770 /* CreateSetViewController.swift */; };
 		E70377541F4E9FB500050770 /* StudySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70377531F4E9FB500050770 /* StudySet.swift */; };
 		E70377561F4EA05100050770 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70377551F4EA05100050770 /* Card.swift */; };
-		E70377581F4EE15000050770 /* AddCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70377571F4EE15000050770 /* AddCardView.swift */; };
+		E70377581F4EE15000050770 /* CreateCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70377571F4EE15000050770 /* CreateCardView.swift */; };
 		F69BA9538B40E7EBA7E5ED6F /* Pods_studyBolt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245C501577B9EBAA107EA504 /* Pods_studyBolt.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,7 +70,7 @@
 		E70377511F4E9BCF00050770 /* CreateSetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateSetViewController.swift; sourceTree = "<group>"; };
 		E70377531F4E9FB500050770 /* StudySet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudySet.swift; sourceTree = "<group>"; };
 		E70377551F4EA05100050770 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		E70377571F4EE15000050770 /* AddCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCardView.swift; sourceTree = "<group>"; };
+		E70377571F4EE15000050770 /* CreateCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCardView.swift; sourceTree = "<group>"; };
 		E9BD954CC95B0D820CA8EB4A /* Pods-studyBoltUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studyBoltUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-studyBoltUITests/Pods-studyBoltUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F3134795FA8412E14E8249BB /* Pods-studyBoltTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studyBoltTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-studyBoltTests/Pods-studyBoltTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F55909F32D73543E3B479373 /* Pods_studyBoltUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_studyBoltUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,7 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				E70377461F4582ED00050770 /* StudySetsCell.swift */,
-				E70377571F4EE15000050770 /* AddCardView.swift */,
+				E70377571F4EE15000050770 /* CreateCardView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -519,7 +519,7 @@
 			files = (
 				E703771A1F3C41F600050770 /* studyBolt.xcdatamodeld in Sources */,
 				E70377121F3C41F500050770 /* AppDelegate.swift in Sources */,
-				E70377581F4EE15000050770 /* AddCardView.swift in Sources */,
+				E70377581F4EE15000050770 /* CreateCardView.swift in Sources */,
 				E70377561F4EA05100050770 /* Card.swift in Sources */,
 				E70377541F4E9FB500050770 /* StudySet.swift in Sources */,
 				E70377521F4E9BCF00050770 /* CreateSetViewController.swift in Sources */,

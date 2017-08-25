@@ -8,8 +8,9 @@
 
 import UIKit
 
-class AddCardView: UIView {
+class CreateCardView: UIView {
     
-    
+    @IBOutlet var termTextField: UITextField!
+    @IBOutlet var definitionTextField: UITextField!
 
 }

@@ -193,7 +193,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eQR-fj-Zgf">
                                         <rect key="frame" x="0.0" y="0.0" width="1125" height="551"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pg4-ff-vYJ" userLabel="AddCardView0">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pg4-ff-vYJ" userLabel="CreateCardView0" customClass="CreateCardView" customModule="studyBolt" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Term" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AFg-IE-neB">
@@ -224,8 +224,12 @@
                                                     <constraint firstAttribute="trailing" secondItem="tq9-CR-VEk" secondAttribute="trailing" constant="8" id="vNm-bL-1ty"/>
                                                     <constraint firstItem="AFg-IE-neB" firstAttribute="leading" secondItem="Pg4-ff-vYJ" secondAttribute="leading" constant="8" id="vvE-xk-HRG"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="definitionTextField" destination="tq9-CR-VEk" id="Ptf-Q7-mqg"/>
+                                                    <outlet property="termTextField" destination="AFg-IE-neB" id="rdk-t6-ene"/>
+                                                </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSW-gG-DJw" userLabel="AddCardView1">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSW-gG-DJw" userLabel="CreateCardView1" customClass="CreateCardView" customModule="studyBolt" customModuleProvider="target">
                                                 <rect key="frame" x="375" y="0.0" width="375" height="551"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kvE-rJ-ys4" userLabel="Term">
@@ -256,8 +260,12 @@
                                                     <constraint firstItem="kvE-rJ-ys4" firstAttribute="leading" secondItem="nSW-gG-DJw" secondAttribute="leading" constant="8" id="UdV-0b-gKh"/>
                                                     <constraint firstAttribute="trailing" secondItem="kvE-rJ-ys4" secondAttribute="trailing" constant="8" id="lqk-Ou-eEN"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="definitionTextField" destination="VyA-Dx-vv6" id="suZ-Px-S5s"/>
+                                                    <outlet property="termTextField" destination="kvE-rJ-ys4" id="usa-KW-igg"/>
+                                                </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gmo-Lr-z6D" userLabel="AddCardView2">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gmo-Lr-z6D" userLabel="CreateCardView2" customClass="CreateCardView" customModule="studyBolt" customModuleProvider="target">
                                                 <rect key="frame" x="750" y="0.0" width="375" height="551"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jxj-9v-rAQ" userLabel="Term">
@@ -288,6 +296,10 @@
                                                     <constraint firstItem="jxj-9v-rAQ" firstAttribute="top" secondItem="Gmo-Lr-z6D" secondAttribute="top" id="b3Z-gU-EJ7"/>
                                                     <constraint firstAttribute="trailing" secondItem="7dS-jZ-Ivy" secondAttribute="trailing" constant="8" id="cZs-Z6-YgV"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="definitionTextField" destination="7dS-jZ-Ivy" id="put-b5-R5w"/>
+                                                    <outlet property="termTextField" destination="jxj-9v-rAQ" id="JfB-42-gds"/>
+                                                </connections>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -337,9 +349,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addCardView0" destination="Pg4-ff-vYJ" id="NZn-lw-pwm"/>
-                        <outlet property="addCardView1" destination="nSW-gG-DJw" id="Sj0-9t-S8z"/>
-                        <outlet property="addCardView2" destination="Gmo-Lr-z6D" id="adU-QB-K1f"/>
+                        <outlet property="createCardView0" destination="Pg4-ff-vYJ" id="NHF-F6-Sbv"/>
+                        <outlet property="createCardView1" destination="nSW-gG-DJw" id="tPq-hf-kzL"/>
+                        <outlet property="createCardView2" destination="Gmo-Lr-z6D" id="umk-St-WbI"/>
                         <outlet property="scrollView" destination="cTS-aR-c3G" id="Cnw-ms-UNa"/>
                         <outlet property="titleTextField" destination="GHY-qc-IqP" id="Jnb-bQ-d3c"/>
                     </connections>

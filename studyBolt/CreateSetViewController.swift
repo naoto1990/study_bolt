@@ -13,9 +13,9 @@ class CreateSetViewController: UIViewController, UITextFieldDelegate, UIScrollVi
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var addCardView0: AddCardView!
-    @IBOutlet weak var addCardView1: AddCardView!
-    @IBOutlet weak var addCardView2: AddCardView!
+    @IBOutlet var createCardView0: CreateCardView!
+    @IBOutlet var createCardView1: CreateCardView!
+    @IBOutlet var createCardView2: CreateCardView!
 
     
     var cards = [Card()]
