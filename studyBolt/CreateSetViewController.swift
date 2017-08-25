@@ -19,7 +19,7 @@ class CreateSetViewController: UIViewController, UITextFieldDelegate {
 
     
     var cards = [Card()]
-    var cardIndex = 0
+    var cardIndex = 1
     
     
     override func viewDidLoad() {
@@ -58,6 +58,7 @@ class CreateSetViewController: UIViewController, UITextFieldDelegate {
         
         updateLocking()
         
+        print("text field got chnaged")
     }
     
     @IBAction func createStudySet(_ sender: Any) {
