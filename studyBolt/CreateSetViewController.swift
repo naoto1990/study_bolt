@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class CreateSetViewController: UIViewController, UITextFieldDelegate {
+class CreateSetViewController: UIViewController {
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -50,16 +50,6 @@ class CreateSetViewController: UIViewController, UITextFieldDelegate {
         
         moveToCenter()
     }
-
-    func textFieldDidChange(_ notification: Notification) {
-        let currentCard = cards[cardIndex]
-        currentCard.term = createCardView1.termTextField.text
-        currentCard.definition = createCardView1.definitionTextField.text
-        
-        updateLocking()
-        
-        print("text field got chnaged")
-    }
     
     @IBAction func createStudySet(_ sender: Any) {
         let realm = try! Realm()
@@ -68,21 +58,24 @@ class CreateSetViewController: UIViewController, UITextFieldDelegate {
         studySet.title = titleTextField.text!
         studySet.createdAt = getTime()
         studySet.studySetID = generateStudySetID()
-        
-        let card = Card()
-        card.term = createCardView1.termTextField.text
-        card.definition = createCardView1.definitionTextField.text
-        card.studySetID = studySet.studySetID
-        
         try! realm.write {
             realm.add(studySet)
-            realm.add(card)
         }
         
-        print(realm.objects(StudySet.self))
+        let card = Card()
+        for c in cards {
+            card.term = c.term
+            card.definition = c.definition
+            card.studySetID = studySet.studySetID
+            
+            try! realm.write {
+                realm.add(card)
+            }
+            
+        }
+        
     }
-    
-    
+
     func getTime() -> String {
         let date = Date()
         let formatter = DateFormatter()
@@ -170,6 +163,20 @@ extension CreateSetViewController {
     }
 }
 
+extension CreateSetViewController: UITextFieldDelegate {
+    
+    // 各カードデータをcardIndex毎にcardsの配列に格納
+    func textFieldDidChange(_ notification: Notification) {
+        let currentCard = cards[cardIndex]
+        currentCard.term = createCardView1.termTextField.text
+        currentCard.definition = createCardView1.definitionTextField.text
+        
+        updateLocking()
+        
+        print("text field got chnaged")
+    }
+    
+}
 
 extension CreateSetViewController: UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
