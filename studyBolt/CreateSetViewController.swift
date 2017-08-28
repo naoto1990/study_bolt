@@ -67,12 +67,12 @@ class CreateSetViewController: UIViewController, UITextFieldDelegate {
         let studySet = StudySet()
         studySet.title = titleTextField.text!
         studySet.createdAt = getTime()
-        studySet.studySetID = "a-01"
+        studySet.studySetID = generateStudySetID()
         
         let card = Card()
         card.term = createCardView1.termTextField.text
         card.definition = createCardView1.definitionTextField.text
-        card.studySetID = "a-01"
+        card.studySetID = studySet.studySetID
         
         try! realm.write {
             realm.add(studySet)
@@ -89,6 +89,12 @@ class CreateSetViewController: UIViewController, UITextFieldDelegate {
         formatter.dateFormat = "MM/dd/yyyy"
         
         return formatter.string(from: date)
+    }
+    
+    func generateStudySetID() -> String {
+        let uuid = NSUUID().uuidString
+        
+        return uuid
     }
     
     
