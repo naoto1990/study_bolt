@@ -198,7 +198,7 @@ extension CreateSetViewController {
     // テスト用のデモカードデータを返すメソッド
     func populateDemoCards(num: Int) {
         
-        for i in 1...num {
+        for i in 0...num {
             let demoCard = Card()
             demoCard.studySetID = "a" + String(i)
             demoCard.term = "aaa" + String(i)
