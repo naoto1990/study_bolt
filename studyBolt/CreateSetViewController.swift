@@ -193,8 +193,7 @@ extension CreateSetViewController: UIScrollViewDelegate {
             // Need to update locking
             updateLocking()
         }
-        
-        print("scrollView moved")
+
     }
 }
 
