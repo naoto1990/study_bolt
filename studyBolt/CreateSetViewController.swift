@@ -34,7 +34,7 @@ class CreateSetViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        populateDemoCards(num: 6)
+        populateDemoCards(num: 10)
         updateTextFields()
         
     }
