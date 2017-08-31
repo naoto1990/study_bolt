@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
     let realm = try! Realm()
     
     var studySetCollection: Results<StudySet>!
+    var cardCollection: Results<Card>!
     
     
     override func viewDidLoad() {
@@ -43,6 +44,9 @@ class HomeViewController: UIViewController {
         do{
             studySetCollection = realm.objects(StudySet.self)
             tableView.reloadData()
+            
+            cardCollection = realm.objects(Card.self)
+            print(cardCollection)
         }catch{
             
         }
