@@ -64,11 +64,14 @@ class CreateSetViewController: UIViewController {
         
         let card = Card()
         for c in cards {
-            card.term = c.term
-            card.definition = c.definition
-            card.studySetID = studySet.studySetID
+//            card.term = c.term
+//            card.definition = c.definition
+//            card.studySetID = studySet.studySetID
             
             try! realm.write {
+                card.term = c.term
+                card.definition = c.definition
+                card.studySetID = studySet.studySetID
                 realm.add(card)
             }
             
