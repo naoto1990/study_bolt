@@ -28,6 +28,7 @@ class HomeViewController: UIViewController {
         tableView.dataSource = self
         
         fetchStudySets()
+        print(cardCollection)
         
     }
     
@@ -46,7 +47,6 @@ class HomeViewController: UIViewController {
             tableView.reloadData()
             
             cardCollection = realm.objects(Card.self)
-            print(cardCollection)
         }catch{
             
         }
@@ -92,8 +92,11 @@ extension HomeViewController: UITableViewDelegate {
             do {
                 let studySet = studySetCollection[indexPath.row]
                 
+                let cards = realm.objects(Card.self).filter("studySetID = %@", studySet.studySetID)
+
                 try! realm.write() {
                     realm.delete(studySet)
+                    realm.delete(cards)
                 }
                 tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
             } catch {
