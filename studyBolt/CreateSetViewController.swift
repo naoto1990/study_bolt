@@ -19,6 +19,8 @@ class CreateSetViewController: UIViewController {
 
     
     var cards = [Card()]
+    
+    // カードの現在ポジションを表す値
     var cardIndex = 0
     
     
@@ -62,14 +64,10 @@ class CreateSetViewController: UIViewController {
         }
         
         let card = Card()
-        for c in cards {
-//            card.term = c.term
-//            card.definition = c.definition
-//            card.studySetID = studySet.studySetID
-            
+        for i in cards {
             try! realm.write {
-                card.term = c.term
-                card.definition = c.definition
+                card.term = i.term
+                card.definition = i.definition
                 card.studySetID = studySet.studySetID
                 realm.add(card)
             }
@@ -138,36 +136,36 @@ extension CreateSetViewController {
         scrollView.contentOffset = CGPoint(x: scrollView.frame.size.width, y: 0)
     }
     
-    //  カードが2枚以上存在する際に、手前のカードのデータを反映する
+    //
     func updateTextFields() {
         
-        // Also needs to update text field content
+        // カードスワイプ画面で2枚目以降にいる場合、直前の画面のUITextFieldに対応するカードデータを反映
         if cardIndex > 0 {
             createCardView0.termTextField.text = cards[cardIndex - 1].term
             createCardView0.definitionTextField.text = cards[cardIndex - 1].definition
-            print(cardIndex)
+            
         }
         
+        // 現在画面のUITextFieldに対応するカードデータを反映
         createCardView1.termTextField.text = cards[cardIndex].term
         createCardView1.definitionTextField.text = cards[cardIndex].definition
         
-        // カードの末尾から2つ目になるまで、末尾のカードのデータを反映する
-        if cardIndex + 1 < cards.count {
+        // 次の画面にカードデータが存在する場合、次の画面のUITextFieldに対応するカードデータを反映
+        if cards.count > cardIndex + 1 {
             createCardView2.termTextField.text = cards[cardIndex + 1].term
             createCardView2.definitionTextField.text = cards[cardIndex + 1].definition
-            print(cardIndex)
             
         } else {
             createCardView2.termTextField.text = nil
             createCardView2.definitionTextField.text = nil
-            print(cardIndex)
+            
         }
     }
 }
 
 extension CreateSetViewController: UITextFieldDelegate {
     
-    // 各カードデータをcardIndex毎にcardsの配列に格納
+    // 各カードデータをcardsの配列に格納(UITextFieldに変更があるごとに更新)
     func textFieldDidChange(_ notification: Notification) {
         let currentCard = cards[cardIndex]
         currentCard.term = createCardView1.termTextField.text
@@ -175,7 +173,6 @@ extension CreateSetViewController: UITextFieldDelegate {
         
         updateLocking()
         
-        print("text field got chnaged")
     }
     
 }
@@ -192,7 +189,6 @@ extension CreateSetViewController: UIScrollViewDelegate {
             moveToCenter()
             
             
-            
             if cardIndex >= cards.count {
                 cards.append(Card())
             }
@@ -202,6 +198,7 @@ extension CreateSetViewController: UIScrollViewDelegate {
             // Need to update locking
             updateLocking()
         }
+        print(cardIndex)
 
     }
 }
