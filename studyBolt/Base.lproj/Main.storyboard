@@ -9,25 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Study-->
-        <scene sceneID="wMQ-Ed-AJP">
-            <objects>
-                <viewController id="5JA-Fx-Ske" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7xW-55-YkG"/>
-                        <viewControllerLayoutGuide type="bottom" id="MqE-Id-1ZA"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3W4-fP-LwJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Study" id="qcf-hA-c8X"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y9N-hP-PeJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2046" y="-1351"/>
-        </scene>
         <!--Home-->
         <scene sceneID="v66-rO-Sb9">
             <objects>
@@ -130,12 +111,12 @@
                     <navigationItem key="navigationItem" title="Home" id="1Hj-TA-2dT" userLabel="Home">
                         <barButtonItem key="leftBarButtonItem" image="Setting" id="ee4-4l-7NE">
                             <connections>
-                                <segue destination="8c8-m9-V8t" kind="push" id="Kea-d6-fcW"/>
+                                <segue destination="8c8-m9-V8t" kind="show" id="Kea-d6-fcW"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="iue-0c-dJE">
                             <connections>
-                                <segue destination="b2a-cd-7ko" kind="push" id="kj2-g9-c6M"/>
+                                <segue destination="b2a-cd-7ko" kind="show" id="kj2-g9-c6M"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
