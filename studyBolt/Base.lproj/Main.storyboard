@@ -375,10 +375,10 @@
             </objects>
             <point key="canvasLocation" x="2164" y="114"/>
         </scene>
-        <!--View Controller-->
+        <!--Experiment View Controller-->
         <scene sceneID="oyy-Nv-OD8">
             <objects>
-                <viewController id="15Z-Fp-VkL" sceneMemberID="viewController">
+                <viewController id="15Z-Fp-VkL" customClass="ExperimentViewController" customModule="studyBolt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lmb-bF-cgv"/>
                         <viewControllerLayoutGuide type="bottom" id="Bf9-n5-2zj"/>
@@ -478,15 +478,54 @@
                                     <constraint firstItem="wYx-0h-N8s" firstAttribute="width" secondItem="cdG-8q-qkj" secondAttribute="width" id="qTt-C2-cHN"/>
                                 </constraints>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8q-zH-hbv">
+                                <rect key="frame" x="28" y="20" width="36" height="30"/>
+                                <state key="normal" title="lock1"/>
+                                <connections>
+                                    <action selector="lock1:" destination="15Z-Fp-VkL" eventType="touchUpInside" id="I6S-JV-pSE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zta-kf-kuf">
+                                <rect key="frame" x="99" y="20" width="38" height="30"/>
+                                <state key="normal" title="lock2"/>
+                                <connections>
+                                    <action selector="lock2:" destination="15Z-Fp-VkL" eventType="touchUpInside" id="Ebs-j9-tCI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MP6-pJ-Emo">
+                                <rect key="frame" x="242" y="20" width="46" height="30"/>
+                                <state key="normal" title="unlock"/>
+                                <connections>
+                                    <action selector="unlock:" destination="15Z-Fp-VkL" eventType="touchUpInside" id="0YP-bR-yKr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzV-WE-vtv">
+                                <rect key="frame" x="168" y="20" width="38" height="30"/>
+                                <state key="normal" title="lock3"/>
+                                <connections>
+                                    <action selector="lock3:" destination="15Z-Fp-VkL" eventType="touchUpInside" id="bV6-9k-9iK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="zta-kf-kuf" firstAttribute="leading" secondItem="G8q-zH-hbv" secondAttribute="trailing" constant="35" id="0mA-c0-Nx7"/>
+                            <constraint firstItem="fzV-WE-vtv" firstAttribute="leading" secondItem="zta-kf-kuf" secondAttribute="trailing" constant="31" id="0oI-Be-dsj"/>
                             <constraint firstItem="cdG-8q-qkj" firstAttribute="leading" secondItem="S98-5N-f4x" secondAttribute="leading" id="1Pe-16-EjB"/>
+                            <constraint firstItem="G8q-zH-hbv" firstAttribute="top" secondItem="Lmb-bF-cgv" secondAttribute="bottom" id="7Ac-bW-vwM"/>
+                            <constraint firstItem="G8q-zH-hbv" firstAttribute="leading" secondItem="S98-5N-f4x" secondAttribute="leading" constant="28" id="B6l-uB-qEA"/>
                             <constraint firstAttribute="trailing" secondItem="cdG-8q-qkj" secondAttribute="trailing" id="CUr-34-9kx"/>
+                            <constraint firstItem="fzV-WE-vtv" firstAttribute="top" secondItem="Lmb-bF-cgv" secondAttribute="bottom" id="Fqj-EV-P3O"/>
+                            <constraint firstItem="MP6-pJ-Emo" firstAttribute="leading" secondItem="fzV-WE-vtv" secondAttribute="trailing" constant="36" id="GGB-J8-eLP"/>
                             <constraint firstItem="Bf9-n5-2zj" firstAttribute="top" secondItem="cdG-8q-qkj" secondAttribute="bottom" id="HmE-6F-Lxf"/>
+                            <constraint firstItem="zta-kf-kuf" firstAttribute="top" secondItem="Lmb-bF-cgv" secondAttribute="bottom" id="LGY-nc-CAu"/>
                             <constraint firstItem="cdG-8q-qkj" firstAttribute="top" secondItem="Lmb-bF-cgv" secondAttribute="bottom" constant="50" id="VPN-Me-VPn"/>
+                            <constraint firstItem="MP6-pJ-Emo" firstAttribute="top" secondItem="Lmb-bF-cgv" secondAttribute="bottom" id="ycZ-Rs-a3S"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="cdG-8q-qkj" id="WgZ-sj-rtf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ElV-BT-U4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
