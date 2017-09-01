@@ -80,7 +80,7 @@
                                             <outlet property="numOfCardsLabel" destination="fIE-2h-0HN" id="JbS-Qo-vKO"/>
                                             <outlet property="titleLabel" destination="HeF-tf-r6f" id="ff8-VC-mHY"/>
                                             <outlet property="updateDateLabel" destination="Snb-SZ-OSE" id="gXV-Va-vgd"/>
-                                            <segue destination="kbd-EJ-8bY" kind="show" id="q05-y1-TNr"/>
+                                            <segue destination="kbd-EJ-8bY" kind="show" identifier="toStudySet" id="q05-y1-TNr"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -379,7 +379,7 @@
         <!--Study-->
         <scene sceneID="lhP-0g-emU">
             <objects>
-                <viewController title="Study" id="kbd-EJ-8bY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="studySet" title="Study" id="kbd-EJ-8bY" customClass="StudySetViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sbh-ly-4yl"/>
                         <viewControllerLayoutGuide type="bottom" id="ICD-yO-AfO"/>
@@ -393,7 +393,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Bp-kF-mpI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Bp-kF-mpI">
                                 <rect key="frame" x="165" y="102" width="45" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
