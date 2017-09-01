@@ -69,8 +69,12 @@ extension HomeViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "studySetsCell") as! StudySetsCell
         
         let studySet = studySetCollection[indexPath.row]
+        // TODO: 各studySet毎に所属するカードを検索して表示するのが処理速度的に問題ないか検討する必要あり
+        // studySet自体のプロパティにカードを配列として持たせれば検索処理自体を省ける
+        let cards = realm.objects(Card.self).filter("studySetID = %@", studySet.studySetID)
+        
         cell.titleLabel.text = studySet.title
-        cell.numOfCardsLabel.text = "23"
+        cell.numOfCardsLabel.text = String(cards.count)
         cell.updateDateLabel.text = studySet.createdAt
         
         return cell
