@@ -19,7 +19,7 @@ class CreateSetViewController: UIViewController {
 
     
     var cards = [Card()]
-    var cardIndex = 1
+    var cardIndex = 0
     
     
     override func viewDidLoad() {
@@ -34,7 +34,6 @@ class CreateSetViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        populateDemoCards(num: 10)
         updateTextFields()
         
     }
