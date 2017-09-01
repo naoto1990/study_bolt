@@ -74,6 +74,8 @@ class CreateSetViewController: UIViewController {
             
         }
         
+        navigationController?.popViewController(animated: true)
+        
     }
 
     func getTime() -> String {
