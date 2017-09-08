@@ -433,6 +433,7 @@
                                         <connections>
                                             <outlet property="definitionInStudySet" destination="X3n-J7-HnM" id="XPL-RY-Fdk"/>
                                             <outlet property="termInStudySet" destination="28D-1d-p09" id="hzL-I7-26N"/>
+                                            <segue destination="b2a-cd-7ko" kind="show" id="gMc-MK-anw"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -443,10 +444,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFr-LZ-y0E">
-                                <rect key="frame" x="165" y="199" width="45" height="30"/>
-                                <state key="normal" title="Study"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCn-bg-MHL" userLabel="Card Num">
                                 <rect key="frame" x="22" y="324" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -459,20 +456,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFr-LZ-y0E">
+                                <rect key="frame" x="142" y="200" width="91" height="34"/>
+                                <state key="normal" title="Study">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qeV-mR-qbw" kind="show" id="VjH-MB-NW0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mCn-bg-MHL" firstAttribute="leading" secondItem="GaT-m2-4ib" secondAttribute="leadingMargin" constant="6" id="20m-25-Vfy"/>
                             <constraint firstItem="mCn-bg-MHL" firstAttribute="top" secondItem="sbh-ly-4yl" secondAttribute="bottom" constant="260" id="3U1-Lu-Va9"/>
+                            <constraint firstItem="OFr-LZ-y0E" firstAttribute="top" secondItem="9Bp-kF-mpI" secondAttribute="bottom" constant="68" id="69J-8t-5MZ"/>
                             <constraint firstItem="Q0l-KZ-DQL" firstAttribute="top" secondItem="sbh-ly-4yl" secondAttribute="bottom" constant="251" id="9qn-82-TBj"/>
-                            <constraint firstAttribute="trailing" secondItem="OFr-LZ-y0E" secondAttribute="trailing" constant="165" id="B4t-8W-hr7"/>
                             <constraint firstItem="9Bp-kF-mpI" firstAttribute="top" secondItem="sbh-ly-4yl" secondAttribute="bottom" constant="38" id="FCa-tZ-1me"/>
                             <constraint firstAttribute="bottom" secondItem="Q0l-KZ-DQL" secondAttribute="bottom" id="KQ8-6b-U1B"/>
                             <constraint firstItem="rxZ-7J-IeW" firstAttribute="leading" secondItem="mCn-bg-MHL" secondAttribute="trailing" constant="17" id="Ngn-ms-iih"/>
+                            <constraint firstItem="OFr-LZ-y0E" firstAttribute="leading" secondItem="GaT-m2-4ib" secondAttribute="leading" constant="142" id="PFA-Dm-Qmn"/>
                             <constraint firstItem="rxZ-7J-IeW" firstAttribute="top" secondItem="sbh-ly-4yl" secondAttribute="bottom" constant="260" id="U3R-cR-ri0"/>
-                            <constraint firstItem="OFr-LZ-y0E" firstAttribute="leading" secondItem="GaT-m2-4ib" secondAttribute="leading" constant="165" id="XSY-s6-M7P"/>
-                            <constraint firstItem="OFr-LZ-y0E" firstAttribute="top" secondItem="9Bp-kF-mpI" secondAttribute="bottom" constant="67" id="YUA-Lq-kiJ"/>
                             <constraint firstItem="9Bp-kF-mpI" firstAttribute="leading" secondItem="GaT-m2-4ib" secondAttribute="leading" id="aM1-Dv-e1W"/>
+                            <constraint firstAttribute="trailing" secondItem="OFr-LZ-y0E" secondAttribute="trailing" constant="142" id="l0w-P5-XW3"/>
                             <constraint firstAttribute="trailing" secondItem="Q0l-KZ-DQL" secondAttribute="trailing" id="pXX-JP-rFr"/>
                             <constraint firstAttribute="trailing" secondItem="9Bp-kF-mpI" secondAttribute="trailing" id="s30-21-V8J"/>
                             <constraint firstItem="Q0l-KZ-DQL" firstAttribute="leading" secondItem="GaT-m2-4ib" secondAttribute="leading" id="tnJ-ud-r9O"/>
@@ -487,6 +493,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nGU-9x-3Mf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2164" y="-653.52323838080963"/>
+        </scene>
+        <!--Flashcard View Controller-->
+        <scene sceneID="TLK-iR-TIg">
+            <objects>
+                <viewController id="qeV-mR-qbw" customClass="FlashcardViewController" customModule="studyBolt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3m2-Gr-KIi"/>
+                        <viewControllerLayoutGuide type="bottom" id="k3V-aQ-Rgz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="duP-aS-cwu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="svR-zz-b9t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3015" y="-654"/>
         </scene>
         <!--Item-->
         <scene sceneID="FnW-GP-Vut">
@@ -549,4 +573,7 @@
         <image name="Home" width="25" height="25"/>
         <image name="Setting" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="kj2-g9-c6M"/>
+    </inferredMetricsTieBreakers>
 </document>
