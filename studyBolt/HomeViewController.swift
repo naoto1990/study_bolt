@@ -28,7 +28,6 @@ class HomeViewController: UIViewController {
         tableView.dataSource = self
         
         fetchStudySets()
-        print(cardCollection)
         
     }
     
