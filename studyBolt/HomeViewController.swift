@@ -53,7 +53,7 @@ class HomeViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "toStudy") {
+        if(segue.identifier == "toStudySet") {
             let studySetViewController = segue.destination as! StudySetViewController
         }
     }
