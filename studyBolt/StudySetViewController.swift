@@ -39,6 +39,13 @@ class StudySetViewController: UIViewController {
         
     }
     
+    // Tabバーのボタンを非表示
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        hidesBottomBarWhenPushed = true
+    }
+    
     func displayStudySetInfo() {
         titleLabel.text = selectedStudySet?.title
         
