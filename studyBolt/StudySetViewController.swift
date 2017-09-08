@@ -110,6 +110,17 @@ extension StudySetViewController: UITableViewDelegate {
             tableView.reloadData()
             fetchCardData()
             displayStudySetInfo()
+            
+            if cardsInselectedStudySet.count == 0 {
+                if let selectedStudySet = selectedStudySet {
+                    try! realm.write() {
+                        realm.delete(selectedStudySet)
+                    }
+                }
+
+                // 一つ前のviewControllerに戻る
+                self.navigationController?.popViewController(animated: true)
+            }
 
         }
     }
