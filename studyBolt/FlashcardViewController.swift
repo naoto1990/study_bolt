@@ -9,7 +9,13 @@
 import UIKit
 
 class FlashcardViewController: UIViewController {
-
+    
+    var cards: Card?
+    
+    // カードの現在ポジションを表す値
+    var cardIndex = 0
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
