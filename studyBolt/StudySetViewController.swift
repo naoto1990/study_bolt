@@ -46,20 +46,19 @@ class StudySetViewController: UIViewController {
         hidesBottomBarWhenPushed = true
     }
     
+    func fetchCardData() {
+        if let selectedStudySet = selectedStudySet {
+            cardsInselectedStudySet = realm.objects(Card.self).filter("studySetID = %@", selectedStudySet.studySetID)
+        }
+        
+    }
+    
     func displayStudySetInfo() {
         titleLabel.text = selectedStudySet?.title
         
         totalCardLabel.text = String(cardsInselectedStudySet.count)
         
     }
-    
-    func fetchCardData() {
-        if let selectedStudySet = selectedStudySet {
-            cardsInselectedStudySet = realm.objects(Card.self).filter("studySetID = %@", selectedStudySet.studySetID)
-        }
-
-    }
-    
 
 }
 
