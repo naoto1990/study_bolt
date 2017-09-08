@@ -59,7 +59,6 @@ extension StudySetViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cardsCell") as! CardCellInStudySet
         
         let cards = realm.objects(Card.self).filter("studySetID = %@", selectedStudySet?.studySetID)
-        print("kkkkkkk")
         
         cell.termInStudySet.text = cards[indexPath.row].term
         cell.definitionInStudySet.text = cards[indexPath.row].definition
