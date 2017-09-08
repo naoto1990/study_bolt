@@ -93,4 +93,24 @@ extension StudySetViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 55
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            do {
+                let card = cardsInselectedStudySet[indexPath.row]
+                
+                try! realm.write() {
+                    realm.delete(card)
+                }
+                tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            } catch {
+                // TODO: 例外クラスを作成し、それを返却する必要あり
+            }
+            
+            tableView.reloadData()
+            fetchCardData()
+            displayStudySetInfo()
+
+        }
+    }
 }
