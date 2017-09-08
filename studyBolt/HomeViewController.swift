@@ -55,6 +55,13 @@ class HomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "toStudySet") {
             let studySetViewController = segue.destination as! StudySetViewController
+            
+            let indexPath = self.tableView.indexPathForSelectedRow
+            
+            if let indexPath = indexPath {
+                studySetViewController.selectedStudySet = studySetCollection?[(indexPath[1])]
+            }
+            
         }
     }
 

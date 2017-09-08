@@ -379,7 +379,7 @@
         <!--Study-->
         <scene sceneID="lhP-0g-emU">
             <objects>
-                <viewController storyboardIdentifier="studySet" title="Study" id="kbd-EJ-8bY" customClass="StudySetViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="studySet" title="Study" id="kbd-EJ-8bY" customClass="StudySetViewController" customModule="studyBolt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sbh-ly-4yl"/>
                         <viewControllerLayoutGuide type="bottom" id="ICD-yO-AfO"/>
@@ -414,6 +414,9 @@
                             <constraint firstItem="9Bp-kF-mpI" firstAttribute="leading" secondItem="GaT-m2-4ib" secondAttribute="leading" constant="165" id="zeY-4W-rYV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="9Bp-kF-mpI" id="aCA-R1-CIf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nGU-9x-3Mf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
