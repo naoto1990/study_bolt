@@ -15,8 +15,9 @@ class StudySetViewController: UIViewController {
     @IBOutlet weak var totalCardLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    var selectedStudySet: StudySet?
     let realm = try! Realm()
+    var selectedStudySet: StudySet?
+    var cardsInselectedStudySet: Results<Card>!
     
     
     override func viewDidLoad() {
@@ -24,6 +25,8 @@ class StudySetViewController: UIViewController {
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        fetchCardData()
         
     }
     
@@ -38,9 +41,16 @@ class StudySetViewController: UIViewController {
     
     func displayStudySetInfo() {
         titleLabel.text = selectedStudySet?.title
-        let cards = realm.objects(Card.self).filter("studySetID = %@", selectedStudySet?.studySetID)
         
-        totalCardLabel.text = String(cards.count)
+        totalCardLabel.text = String(cardsInselectedStudySet.count)
+        
+    }
+    
+    func fetchCardData() {
+        if let selectedStudySet = selectedStudySet {
+            cardsInselectedStudySet = realm.objects(Card.self).filter("studySetID = %@", selectedStudySet.studySetID)
+        }
+
     }
     
 
@@ -50,24 +60,24 @@ class StudySetViewController: UIViewController {
 extension StudySetViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let cards = realm.objects(Card.self).filter("studySetID = %@", selectedStudySet?.studySetID)
         
-        return cards.count
+        return cardsInselectedStudySet.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cardsCell") as! CardCellInStudySet
         
-        let cards = realm.objects(Card.self).filter("studySetID = %@", selectedStudySet?.studySetID)
-        
-        cell.termInStudySet.text = cards[indexPath.row].term
-        cell.definitionInStudySet.text = cards[indexPath.row].definition
+        cell.termInStudySet.text = cardsInselectedStudySet[indexPath.row].term
+        cell.definitionInStudySet.text = cardsInselectedStudySet[indexPath.row].definition
         
         return cell
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
+        
     }
 
 }
