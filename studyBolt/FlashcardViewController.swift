@@ -12,10 +12,8 @@ import RealmSwift
 class FlashcardViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
-    // 現状使用していない
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var centerScrollView: UIScrollView!
-    // 現状使用していない
     @IBOutlet weak var centerContainerView: UIView!
     
     @IBOutlet weak var flashcardView0: FlashcardView!
@@ -52,6 +50,7 @@ class FlashcardViewController: UIViewController {
         
         updateLabels()
         updateLabelsInLeftAndRight()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -84,9 +83,7 @@ extension FlashcardViewController {
     }
     
     
-    //methods controlling placements of views in scroll view
     func moveToCenter() {
-        //Why should I set frameSizeHeight to contentOffset's y?
         scrollView.contentOffset = CGPoint(x: 0, y: scrollView.frame.size.height)
         centerScrollView.contentOffset = CGPoint(x: centerScrollView.frame.size.width, y: 0)
     }
@@ -117,26 +114,20 @@ extension FlashcardViewController {
 
     func updateLabels() {
         
-        // Also needs to update text field content
+        // カードスワイプ画面で2枚目以降にいる場合、直前の画面のUILabelに対応するTermデータを反映
         if cardIndex > 0 {
             flashcardView0.termInFlashCard.text = cards[cardIndex - 1].term
             
-            //Make UILavel size fit to text
-            //            flashCardView0.termInFlashCard.sizeToFit()
         } else {
             flashcardView0.termInFlashCard.text = ""
         }
         
         flashcardView1.termInFlashCard.text = cards[cardIndex].term
         
-        //Make UILavel size fit to text
-        //        flashCardView1.termInFlashCard.sizeToFit()
-        
-        if cardIndex + 1 < cards.count {
+        // 次の画面にカードデータが存在する場合、次の画面のUILabelに対応するTermデータを反映
+        if cards.count > cardIndex + 1 {
             flashcardView2.termInFlashCard.text = cards[cardIndex + 1].term
-            
-            //Make UILavel size fit to text
-            //            flashCardView2.termInFlashCard.sizeToFit()
+        
         } else {
             flashcardView2.termInFlashCard.text = nil
         }
@@ -144,14 +135,11 @@ extension FlashcardViewController {
     
     func updateLabelsInLeftAndRight() {
         
-        // Also needs to update text field content
+        // カードスワイプ画面で2枚目以降にいる場合、直前の画面のUILabelに対応するDefinitionデータを反映
         if cardIndex > 0 {
             flashcardViewL.definitionInFlashCard.text = cards[cardIndex - 1].definition
             flashcardViewR.definitionInFlashCard.text = cards[cardIndex - 1].definition
-            
-            //Make UILavel size fit to text
-            //            flashCardViewL.definitionInFlashCard.sizeToFit()
-            //            flashCardViewR.definitionInFlashCard.sizeToFit()
+        
         } else {
             flashcardViewL.definitionInFlashCard.text = ""
             flashcardViewR.definitionInFlashCard.text = ""
@@ -159,10 +147,6 @@ extension FlashcardViewController {
         
         flashcardViewL.definitionInFlashCard.text = cards[cardIndex].definition
         flashcardViewR.definitionInFlashCard.text = cards[cardIndex].definition
-        
-        //Make UILavel size fit to text
-        //        flashCardViewL.definitionInFlashCard.sizeToFit()
-        //        flashCardViewR.definitionInFlashCard.sizeToFit()
         
     }
     

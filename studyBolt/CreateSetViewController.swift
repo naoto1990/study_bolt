@@ -138,7 +138,7 @@ extension CreateSetViewController {
         scrollView.contentOffset = CGPoint(x: scrollView.frame.size.width, y: 0)
     }
     
-    //
+    
     func updateTextFields() {
         
         // カードスワイプ画面で2枚目以降にいる場合、直前の画面のUITextFieldに対応するカードデータを反映
