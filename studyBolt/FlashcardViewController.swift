@@ -60,7 +60,7 @@ extension FlashcardViewController {
     
     func updateLocking() {
         unlockScrollView()
-        if cardIndex <= 0 {
+        if 0 >= cardIndex {
             lockScrollViewTop()
             
             if cards.count == 1{

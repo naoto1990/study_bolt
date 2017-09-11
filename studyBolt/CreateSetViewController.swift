@@ -101,13 +101,13 @@ extension CreateSetViewController {
     
     func updateLocking() {
         if createCardView1.termTextField.text!.isEmpty && createCardView1.definitionTextField.text!.isEmpty {
-            if cardIndex <= 0 {
+            if 0 >= cardIndex {
                 lockScrollView()
             } else {
                 lockScrollViewRight()
             }
         } else {
-            if cardIndex <= 0 {
+            if 0 >= cardIndex {
                 lockScrollViewLeft()
             } else {
                 unlockScrollView()
