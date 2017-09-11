@@ -59,6 +59,15 @@ class StudySetViewController: UIViewController {
         totalCardLabel.text = String(cardsInselectedStudySet.count)
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "toFlashcard") {
+            let flashcardViewController = segue.destination as! FlashcardViewController
+            
+            flashcardViewController.cards = cardsInselectedStudySet
+            
+        }
+    }
 
 }
 

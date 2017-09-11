@@ -10,7 +10,7 @@ import UIKit
 
 class FlashcardViewController: UIViewController {
     
-    var cards: Card?
+    var cards: Results<Card>!
     
     // カードの現在ポジションを表す値
     var cardIndex = 0
