@@ -159,12 +159,9 @@ extension FlashcardViewController: UIScrollViewDelegate {
                 cardIndex += 1
             }
             
-            
             moveToCenter()
-            
             updateLabels()
             updateLabelsInLeftAndRight()
-            
             updateLocking()
         }
     }
