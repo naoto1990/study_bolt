@@ -61,10 +61,18 @@ class StudySetViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "toFlashcard") {
+        if segue.identifier == "toFlashcard" {
             let flashcardViewController = segue.destination as! FlashcardViewController
             
             flashcardViewController.cards = cardsInselectedStudySet
+            
+        }
+        
+        else if segue.identifier == "toCreateSetFromStudySet" {
+            let createSetViewController = segue.destination as! CreateSetViewController
+            
+//            createSetViewController.studySet = selectedStudySet
+//            createSetViewController.cards = cardsInselectedStudySet
             
         }
     }

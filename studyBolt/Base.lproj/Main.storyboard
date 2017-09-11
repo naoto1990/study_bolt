@@ -433,7 +433,7 @@
                                         <connections>
                                             <outlet property="definitionInStudySet" destination="X3n-J7-HnM" id="XPL-RY-Fdk"/>
                                             <outlet property="termInStudySet" destination="28D-1d-p09" id="hzL-I7-26N"/>
-                                            <segue destination="b2a-cd-7ko" kind="show" id="gMc-MK-anw"/>
+                                            <segue destination="b2a-cd-7ko" kind="show" identifier="toCreateSetFromStudySet" id="gMc-MK-anw"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -783,6 +783,6 @@
         <image name="Setting" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kj2-g9-c6M"/>
+        <segue reference="gMc-MK-anw"/>
     </inferredMetricsTieBreakers>
 </document>
