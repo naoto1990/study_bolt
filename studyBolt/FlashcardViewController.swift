@@ -35,13 +35,6 @@ class FlashcardViewController: UIViewController {
         
         scrollView.delegate = self
         
-        let termString = cards[cardIndex].term
-        flashcardView1.termInFlashCard.text = termString
-        
-        let definitionString = cards[cardIndex].definition
-        flashcardViewL.definitionInFlashCard.text = definitionString
-        flashcardViewR.definitionInFlashCard.text = definitionString
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
