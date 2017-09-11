@@ -521,7 +521,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GVi-Oi-q4H" userLabel="FlashcardViewL" customClass="FlashcardView" customModule="studyBolt" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cb-WC-x0p" userLabel="DefinitionL">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cb-WC-x0p" userLabel="DefinitionL">
                                                                         <rect key="frame" x="62" y="208.5" width="250" height="250"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="250" id="2Mt-OH-Msw"/>
@@ -544,7 +544,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jEJ-Ex-eba" userLabel="FlashcardView1" customClass="FlashcardView" customModule="studyBolt" customModuleProvider="target">
                                                                 <rect key="frame" x="375" y="0.0" width="375" height="667"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcj-Q1-Clm" userLabel="TermInFlashcard">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcj-Q1-Clm" userLabel="TermInFlashcard">
                                                                         <rect key="frame" x="62.5" y="209" width="250" height="250"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="250" id="bUO-OF-Rd2"/>
@@ -567,7 +567,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FKT-fT-sES" userLabel="FlashcardViewR" customClass="FlashcardView" customModule="studyBolt" customModuleProvider="target">
                                                                 <rect key="frame" x="750" y="0.0" width="375" height="667"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XG-UD-USv" userLabel="DefinitionR">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XG-UD-USv" userLabel="DefinitionR">
                                                                         <rect key="frame" x="62" y="208.5" width="250" height="250"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="250" id="075-TV-Smd"/>
@@ -616,7 +616,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tQM-Wo-NNb" userLabel="FlashcardView0" customClass="FlashcardView" customModule="studyBolt" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFn-aw-HoU" userLabel="TermInFlashcard">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFn-aw-HoU" userLabel="TermInFlashcard">
                                                         <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="250" id="aWI-Jw-Mfw"/>
@@ -639,7 +639,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="23F-d8-5py" userLabel="FlashcardView2" customClass="FlashcardView" customModule="studyBolt" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="1334" width="375" height="667"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fi-9X-ZSD" userLabel="TermInFlashcard">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fi-9X-ZSD" userLabel="TermInFlashcard">
                                                         <rect key="frame" x="62" y="208.5" width="250" height="250"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="250" id="hSM-Va-cVY"/>
