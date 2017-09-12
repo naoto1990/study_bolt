@@ -169,9 +169,8 @@ extension CreateSetViewController: UITextFieldDelegate {
     
     // 各カードデータをcardsの配列に格納(UITextFieldに変更があるごとに更新)
     func textFieldDidChange(_ notification: Notification) {
-        let currentCard = cards[cardIndex]
-        currentCard.term = createCardView1.termTextField.text
-        currentCard.definition = createCardView1.definitionTextField.text
+        cards[cardIndex].term = createCardView1.termTextField.text
+        cards[cardIndex].definition = createCardView1.definitionTextField.text
         
         updateLocking()
         
