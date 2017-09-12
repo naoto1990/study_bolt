@@ -77,6 +77,7 @@ class StudySetViewController: UIViewController {
             
             createSetViewController.selectedStudySet = selectedStudySet
             createSetViewController.cardsInSelectedStudySet = cardsInSelectedStudySet
+            createSetViewController.cardIndex = tableView.indexPathForSelectedRow?.row ?? 0
             
         }
     }
