@@ -64,36 +64,32 @@ class CreateSetViewController: UIViewController {
         let realm = try! Realm()
         
         if selectedStudySet != nil{
-            // Realmで既存のデータに追加する方法を確認、実装
             for i in cards {
                 let card = Card()
                 try! realm.write {
                     card.term = i.term
                     card.definition = i.definition
                     card.studySetID = selectedStudySet?.studySetID
+                    
                     if i.cardID != nil {
                         card.cardID = i.cardID
                     } else {
                         card.cardID = generateCardID()
                     }
-                    
-                    print(card.cardID ?? "no ID")
-                    
                     realm.add(card, update: true)
+                    
                 }
                 
             }
-            
         } else {
-        
             let studySet = StudySet()
             studySet.title = titleTextField.text!
             studySet.createdAt = getTime()
             studySet.studySetID = generateStudySetID()
             try! realm.write {
                 realm.add(studySet)
+                
             }
-            
             for i in cards {
                 let card = Card()
                 try! realm.write {
@@ -131,8 +127,6 @@ class CreateSetViewController: UIViewController {
         return "C-" + uuid
     }
     
-    
-
 }
 
 
@@ -204,20 +198,24 @@ extension CreateSetViewController {
     }
 }
 
+
 extension CreateSetViewController: UITextFieldDelegate {
     
     // 各カードデータをcardsの配列に格納(UITextFieldに変更があるごとに更新)
     func textFieldDidChange(_ notification: Notification) {
-        cards[cardIndex].term = createCardView1.termTextField.text
-        cards[cardIndex].definition = createCardView1.definitionTextField.text
+        let realm = try! Realm()
+        
+        try! realm.write {
+            cards[cardIndex].term = createCardView1.termTextField.text
+            cards[cardIndex].definition = createCardView1.definitionTextField.text
+        }
         
         updateLocking()
-        print("textChnaged")
-        print(cards)
         
     }
     
 }
+
 
 extension CreateSetViewController: UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
@@ -236,14 +234,13 @@ extension CreateSetViewController: UIScrollViewDelegate {
             }
             
             updateTextFields()
-            
-            // Need to update locking
             updateLocking()
         }
         print(cardIndex)
 
     }
 }
+
 
 // テスト用メソッド
 extension CreateSetViewController {
