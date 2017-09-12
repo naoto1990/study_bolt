@@ -17,7 +17,7 @@ class StudySetViewController: UIViewController {
     
     let realm = try! Realm()
     var selectedStudySet: StudySet?
-    var cardsInselectedStudySet: Results<Card>!
+    var cardsInSelectedStudySet: Results<Card>!
     
     
     override func viewDidLoad() {
@@ -48,7 +48,7 @@ class StudySetViewController: UIViewController {
     
     func fetchCardData() {
         if let selectedStudySet = selectedStudySet {
-            cardsInselectedStudySet = realm.objects(Card.self).filter("studySetID = %@", selectedStudySet.studySetID)
+            cardsInSelectedStudySet = realm.objects(Card.self).filter("studySetID = %@", selectedStudySet.studySetID)
         }
         
     }
@@ -56,7 +56,7 @@ class StudySetViewController: UIViewController {
     func displayStudySetInfo() {
         titleLabel.text = selectedStudySet?.title
         
-        totalCardLabel.text = String(cardsInselectedStudySet.count)
+        totalCardLabel.text = String(cardsInSelectedStudySet.count)
         
     }
     
@@ -64,7 +64,7 @@ class StudySetViewController: UIViewController {
         if segue.identifier == "toFlashcard" {
             let flashcardViewController = segue.destination as! FlashcardViewController
             
-            flashcardViewController.cards = cardsInselectedStudySet
+            flashcardViewController.cards = cardsInSelectedStudySet
             
         }
         
@@ -84,15 +84,15 @@ extension StudySetViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return cardsInselectedStudySet.count
+        return cardsInSelectedStudySet.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cardsCell") as! CardCellInStudySet
         
-        cell.termInStudySet.text = cardsInselectedStudySet[indexPath.row].term
-        cell.definitionInStudySet.text = cardsInselectedStudySet[indexPath.row].definition
+        cell.termInStudySet.text = cardsInSelectedStudySet[indexPath.row].term
+        cell.definitionInStudySet.text = cardsInSelectedStudySet[indexPath.row].definition
         
         return cell
         
@@ -114,7 +114,7 @@ extension StudySetViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             do {
-                let card = cardsInselectedStudySet[indexPath.row]
+                let card = cardsInSelectedStudySet[indexPath.row]
                 
                 try! realm.write() {
                     realm.delete(card)
@@ -128,7 +128,7 @@ extension StudySetViewController: UITableViewDelegate {
             fetchCardData()
             displayStudySetInfo()
             
-            if cardsInselectedStudySet.count == 0 {
+            if cardsInSelectedStudySet.count == 0 {
                 if let selectedStudySet = selectedStudySet {
                     try! realm.write() {
                         realm.delete(selectedStudySet)
