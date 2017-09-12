@@ -217,7 +217,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSW-gG-DJw" userLabel="CreateCardView1" customClass="CreateCardView" customModule="studyBolt" customModuleProvider="target">
                                                 <rect key="frame" x="375" y="0.0" width="375" height="551"/>
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kvE-rJ-ys4" userLabel="Term">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Term" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kvE-rJ-ys4" userLabel="Term">
                                                         <rect key="frame" x="8" y="0.0" width="359" height="80"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="359" id="DQw-Zr-PVy"/>
@@ -227,7 +227,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VyA-Dx-vv6" userLabel="Definition">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Definition" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VyA-Dx-vv6" userLabel="Definition">
                                                         <rect key="frame" x="8" y="88" width="359" height="80"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="359" id="8Dc-Qx-wFl"/>
@@ -256,7 +256,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gmo-Lr-z6D" userLabel="CreateCardView2" customClass="CreateCardView" customModule="studyBolt" customModuleProvider="target">
                                                 <rect key="frame" x="750" y="0.0" width="375" height="551"/>
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jxj-9v-rAQ" userLabel="Term">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Term" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jxj-9v-rAQ" userLabel="Term">
                                                         <rect key="frame" x="8" y="0.0" width="359" height="80"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="80" id="Awe-N1-GhO"/>
@@ -266,7 +266,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7dS-jZ-Ivy" userLabel="Definition">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Definition" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7dS-jZ-Ivy" userLabel="Definition">
                                                         <rect key="frame" x="8" y="88" width="359" height="80"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="80" id="EfY-Ae-2Xz"/>
