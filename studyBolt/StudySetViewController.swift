@@ -31,6 +31,10 @@ class StudySetViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        fetchCardData()
+        self.tableView.reloadData()
         displayStudySetInfo()
     }
 
@@ -71,8 +75,8 @@ class StudySetViewController: UIViewController {
         else if segue.identifier == "toCreateSetFromStudySet" {
             let createSetViewController = segue.destination as! CreateSetViewController
             
-//            createSetViewController.studySet = selectedStudySet
-//            createSetViewController.cards = cardsInselectedStudySet
+            createSetViewController.selectedStudySet = selectedStudySet
+            createSetViewController.cardsInSelectedStudySet = cardsInSelectedStudySet
             
         }
     }

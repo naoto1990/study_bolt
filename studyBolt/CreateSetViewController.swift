@@ -18,6 +18,9 @@ class CreateSetViewController: UIViewController {
     @IBOutlet var createCardView2: CreateCardView!
 
     
+    var selectedStudySet: StudySet?
+    var cardsInSelectedStudySet: Results<Card>!
+    
     var cards = [Card()]
     
     // カードの現在ポジションを表す値
@@ -35,6 +38,11 @@ class CreateSetViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        if selectedStudySet != nil{
+            titleTextField.text = selectedStudySet?.title
+            cards = Array(cardsInSelectedStudySet)
+        }
         
         updateTextFields()
         
@@ -55,23 +63,48 @@ class CreateSetViewController: UIViewController {
     @IBAction func createStudySet(_ sender: Any) {
         let realm = try! Realm()
         
-        let studySet = StudySet()
-        studySet.title = titleTextField.text!
-        studySet.createdAt = getTime()
-        studySet.studySetID = generateStudySetID()
-        try! realm.write {
-            realm.add(studySet)
-        }
-        
-        for i in cards {
-            let card = Card()
-            try! realm.write {
-                card.term = i.term
-                card.definition = i.definition
-                card.studySetID = studySet.studySetID
-                realm.add(card)
+        if selectedStudySet != nil{
+            // Realmで既存のデータに追加する方法を確認、実装
+            for i in cards {
+                let card = Card()
+                try! realm.write {
+                    card.term = i.term
+                    card.definition = i.definition
+                    card.studySetID = selectedStudySet?.studySetID
+                    if i.cardID != nil {
+                        card.cardID = i.cardID
+                    } else {
+                        card.cardID = generateCardID()
+                    }
+                    
+                    print(card.cardID ?? "no ID")
+                    
+                    realm.add(card, update: true)
+                }
+                
             }
             
+        } else {
+        
+            let studySet = StudySet()
+            studySet.title = titleTextField.text!
+            studySet.createdAt = getTime()
+            studySet.studySetID = generateStudySetID()
+            try! realm.write {
+                realm.add(studySet)
+            }
+            
+            for i in cards {
+                let card = Card()
+                try! realm.write {
+                    card.term = i.term
+                    card.definition = i.definition
+                    card.studySetID = studySet.studySetID
+                    card.cardID = generateCardID()
+                    realm.add(card)
+                }
+                
+            }
         }
         
         navigationController?.popViewController(animated: true)
@@ -89,7 +122,13 @@ class CreateSetViewController: UIViewController {
     func generateStudySetID() -> String {
         let uuid = NSUUID().uuidString
         
-        return uuid
+        return "S-" + uuid
+    }
+    
+    func generateCardID() -> String {
+        let uuid = NSUUID().uuidString
+        
+        return "C-" + uuid
     }
     
     
@@ -173,6 +212,8 @@ extension CreateSetViewController: UITextFieldDelegate {
         cards[cardIndex].definition = createCardView1.definitionTextField.text
         
         updateLocking()
+        print("textChnaged")
+        print(cards)
         
     }
     
