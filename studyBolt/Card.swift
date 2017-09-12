@@ -11,7 +11,12 @@ import RealmSwift
 
 class Card: Object {
     dynamic var studySetID: String?
+    dynamic var cardID: String?
     dynamic var term: String?
     dynamic var definition: String?
+    
+    override static func primaryKey() -> String? {
+        return "cardID"
+    }
 
 }

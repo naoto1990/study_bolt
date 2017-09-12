@@ -14,4 +14,7 @@ class StudySet: Object {
     dynamic var studySetID = String()
     dynamic var createdAt = String()
     
+    override static func primaryKey() -> String? {
+        return "studySetID"
+    }
 }
