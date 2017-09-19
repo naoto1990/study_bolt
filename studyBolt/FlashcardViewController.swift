@@ -41,6 +41,8 @@ class FlashcardViewController: UIViewController {
         // TODO: 下記必要あるか確認。必要なければ全箇所から削除
         super.viewWillAppear(animated)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(FlashcardViewController.onOrientationChange), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+        
         updateLabels()
         updateLabelsInLeftAndRight()
         
@@ -51,6 +53,22 @@ class FlashcardViewController: UIViewController {
         
         moveToCenter()
         updateLocking()
+    }
+    
+    func onOrientationChange() {
+        // 現在のデバイスの向きを取得
+        let deviceOrientation: UIDeviceOrientation!  = UIDevice.current.orientation
+        
+        if UIDeviceOrientationIsLandscape(deviceOrientation) {
+            //横向きの判定。向きに従い位置を調整
+            moveToCenter()
+            
+        } else if UIDeviceOrientationIsPortrait(deviceOrientation){
+            //縦向きの判定。向きに従い位置を調整
+            moveToCenter()
+            
+        }
+        
     }
 
 }
