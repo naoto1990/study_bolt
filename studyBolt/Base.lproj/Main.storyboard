@@ -122,6 +122,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="Djj-Nd-LTG" id="xGg-mA-zFk"/>
                         <outlet property="tableView" destination="KIZ-IM-5rE" id="h8V-K2-r1r"/>
                     </connections>
                 </viewController>
