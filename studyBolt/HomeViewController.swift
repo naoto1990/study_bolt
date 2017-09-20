@@ -82,7 +82,6 @@ class HomeViewController: UIViewController {
             
             tableView.reloadData()
             
-            cardCollection = realm.objects(Card.self)
         }catch{
             print("Error caused by search")
         }
