@@ -76,8 +76,10 @@ class HomeViewController: UIViewController {
     
     func searchStudySet() {
         do{
-            let searchText = searchBar.text ?? ""
-            studySetCollection = realm.objects(StudySet.self).filter("title CONTAINS[c] %@", searchText)
+            if let searchText = searchBar.text {
+                studySetCollection = realm.objects(StudySet.self).filter("title CONTAINS[c] %@", searchText)
+            }
+            
             tableView.reloadData()
             
             cardCollection = realm.objects(Card.self)
