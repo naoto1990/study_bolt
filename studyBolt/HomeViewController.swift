@@ -14,11 +14,33 @@ import RealmSwift
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     let realm = try! Realm()
     
     var studySetCollection: Results<StudySet>!
     var cardCollection: Results<Card>!
+    
+    // UISearchBarのモード
+    enum State {
+        case DefaultMode
+        case SearchMode
+    }
+    
+    var state: State = .DefaultMode {
+        didSet {
+            switch (state){
+            case .DefaultMode:
+                searchBar.resignFirstResponder()
+                searchBar.showsCancelButton = false
+                
+            case .SearchMode:
+                let searchText = searchBar.text ?? ""
+                searchBar.setShowsCancelButton(true, animated: true)
+                
+            }
+        }
+    }
     
     
     override func viewDidLoad() {
@@ -26,6 +48,7 @@ class HomeViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        searchBar.delegate = self
         
         fetchStudySets()
         
@@ -51,6 +74,19 @@ class HomeViewController: UIViewController {
         }
     }
     
+    func searchStudySet() {
+        do{
+            if let searchText = searchBar.text {
+                studySetCollection = realm.objects(StudySet.self).filter("title CONTAINS[c] %@", searchText)
+            }
+            
+            tableView.reloadData()
+            
+        }catch{
+            print("Error caused by search")
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "toStudySet") {
             let studySetViewController = segue.destination as! StudySetViewController
@@ -70,10 +106,8 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let studySets = realm.objects(StudySet.self)
-        
-        // demoデータの総数を返却
-        return studySets.count
+        // studySetCollectionの総数を返却
+        return studySetCollection.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -120,5 +154,26 @@ extension HomeViewController: UITableViewDelegate {
             tableView.reloadData()
         }
     }
+}
 
+
+extension HomeViewController: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        state = .SearchMode
+        if searchBar.text!.isEmpty{
+            fetchStudySets()
+            
+        }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        state = .DefaultMode
+        fetchStudySets()
+        
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchStudySet()
+        
+    }
 }
