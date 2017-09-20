@@ -161,16 +161,18 @@ extension HomeViewController: UISearchBarDelegate {
         state = .SearchMode
         if searchBar.text!.isEmpty{
             fetchStudySets()
+            
         }
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         state = .DefaultMode
         fetchStudySets()
+        
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchStudySet()
-        //notes = searchStudySets(searchText)
+        
     }
 }
