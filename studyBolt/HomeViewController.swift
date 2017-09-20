@@ -105,10 +105,8 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let studySets = realm.objects(StudySet.self)
-        
-        // demoデータの総数を返却
-        return studySets.count
+        // studySetCollectionの総数を返却
+        return studySetCollection.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
