@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZWc-zq-Ivm">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina5_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,18 +19,18 @@
                         <viewControllerLayoutGuide type="bottom" id="Ygn-yc-YeY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nJS-w1-0pJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KIZ-IM-5rE">
-                                <rect key="frame" x="0.0" y="108" width="414" height="579"/>
+                                <rect key="frame" x="0.0" y="108" width="736" height="257"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="studySetsCell" id="lqi-ke-FZZ" customClass="StudySetsCell" customModule="studyBolt" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="736" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lqi-ke-FZZ" id="pgS-bn-97T">
-                                            <rect key="frame" x="0.0" y="0.0" width="381" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="686" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeF-tf-r6f">
@@ -91,7 +91,7 @@
                                 </connections>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Djj-Nd-LTG">
-                                <rect key="frame" x="0.0" y="64" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="64" width="736" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
@@ -139,7 +139,7 @@
                         <viewControllerLayoutGuide type="bottom" id="a2Y-7W-9wQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rVG-cN-PAi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -158,11 +158,11 @@
                         <viewControllerLayoutGuide type="bottom" id="b0r-b5-jx7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yJT-vj-Xgh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GHY-qc-IqP">
-                                <rect key="frame" x="8" y="78" width="398" height="30"/>
+                                <rect key="frame" x="8" y="78" width="720" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="UV2-QP-MPP"/>
                                 </constraints>
@@ -171,16 +171,16 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTS-aR-c3G">
-                                <rect key="frame" x="0.0" y="116" width="414" height="620"/>
+                                <rect key="frame" x="0.0" y="116" width="736" height="298"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eQR-fj-Zgf" userLabel="Container View">
-                                        <rect key="frame" x="0.0" y="0.0" width="1242" height="620"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="2208" height="298"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pg4-ff-vYJ" userLabel="CreateCardView0" customClass="CreateCardView" customModule="studyBolt" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="620"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="736" height="298"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Term" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AFg-IE-neB">
-                                                        <rect key="frame" x="8" y="0.0" width="398" height="80"/>
+                                                        <rect key="frame" x="8" y="0.0" width="720" height="80"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="398" id="5Yf-eC-fzK"/>
                                                             <constraint firstAttribute="width" constant="359" id="DTe-YS-ZfI"/>
@@ -207,7 +207,7 @@
                                                         </variation>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Definition" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tq9-CR-VEk">
-                                                        <rect key="frame" x="8" y="88" width="398" height="80"/>
+                                                        <rect key="frame" x="8" y="88" width="720" height="80"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="359" id="GEc-p8-4FF"/>
                                                             <constraint firstAttribute="height" constant="80" id="GII-R1-gQ4"/>
@@ -250,10 +250,10 @@
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSW-gG-DJw" userLabel="CreateCardView1" customClass="CreateCardView" customModule="studyBolt" customModuleProvider="target">
-                                                <rect key="frame" x="414" y="0.0" width="414" height="620"/>
+                                                <rect key="frame" x="736" y="0.0" width="736" height="298"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Term" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kvE-rJ-ys4" userLabel="Term">
-                                                        <rect key="frame" x="8" y="0.0" width="398" height="80"/>
+                                                        <rect key="frame" x="8" y="0.0" width="720" height="80"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="398" id="5HC-Vd-mij"/>
                                                             <constraint firstAttribute="width" constant="359" id="DQw-Zr-PVy"/>
@@ -280,7 +280,7 @@
                                                         </variation>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Definition" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VyA-Dx-vv6" userLabel="Definition">
-                                                        <rect key="frame" x="8" y="88" width="398" height="80"/>
+                                                        <rect key="frame" x="8" y="88" width="720" height="80"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="359" id="8Dc-Qx-wFl"/>
                                                             <constraint firstAttribute="height" constant="80" id="kfT-1c-epm"/>
@@ -323,10 +323,10 @@
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gmo-Lr-z6D" userLabel="CreateCardView2" customClass="CreateCardView" customModule="studyBolt" customModuleProvider="target">
-                                                <rect key="frame" x="828" y="0.0" width="414" height="620"/>
+                                                <rect key="frame" x="1472" y="0.0" width="736" height="298"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Term" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jxj-9v-rAQ" userLabel="Term">
-                                                        <rect key="frame" x="8" y="0.0" width="398" height="80"/>
+                                                        <rect key="frame" x="8" y="0.0" width="720" height="80"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="80" id="Awe-N1-GhO"/>
                                                             <constraint firstAttribute="width" constant="398" id="R9r-j6-1hO"/>
@@ -353,7 +353,7 @@
                                                         </variation>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Definition" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7dS-jZ-Ivy" userLabel="Definition">
-                                                        <rect key="frame" x="8" y="88" width="398" height="80"/>
+                                                        <rect key="frame" x="8" y="88" width="720" height="80"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="80" id="EfY-Ae-2Xz"/>
                                                             <constraint firstAttribute="width" constant="359" id="Gvb-JA-YYN"/>
@@ -412,7 +412,9 @@
                                             <constraint firstItem="nSW-gG-DJw" firstAttribute="top" secondItem="eQR-fj-Zgf" secondAttribute="top" id="TgG-bQ-h0F"/>
                                             <constraint firstAttribute="bottom" secondItem="Gmo-Lr-z6D" secondAttribute="bottom" id="eGh-Nn-rZj"/>
                                             <constraint firstItem="Gmo-Lr-z6D" firstAttribute="leading" secondItem="nSW-gG-DJw" secondAttribute="trailing" id="hhm-eD-KgI"/>
-                                            <constraint firstAttribute="width" constant="2001" id="vXG-kL-rE3"/>
+                                            <constraint firstAttribute="width" constant="2001" id="vXG-kL-rE3">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="2208"/>
+                                            </constraint>
                                             <constraint firstItem="nSW-gG-DJw" firstAttribute="leading" secondItem="Pg4-ff-vYJ" secondAttribute="trailing" id="vcD-ps-8Pj"/>
                                             <constraint firstAttribute="width" constant="1125" id="yno-1R-27n">
                                                 <variation key="heightClass=regular-widthClass=compact" constant="1242"/>
@@ -534,7 +536,7 @@
                         <viewControllerLayoutGuide type="bottom" id="0xh-FU-FEW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="g3b-yy-lrb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -554,22 +556,22 @@
                         <viewControllerLayoutGuide type="bottom" id="ICD-yO-AfO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GaT-m2-4ib">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q0l-KZ-DQL">
-                                <rect key="frame" x="0.0" y="315" width="414" height="421"/>
+                                <rect key="frame" x="0.0" y="264" width="736" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cardsCell" rowHeight="52" id="fCq-ar-3Yg" customClass="CardCellInStudySet" customModule="studyBolt" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="52"/>
+                                        <rect key="frame" x="0.0" y="28" width="736" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fCq-ar-3Yg" id="Yl7-Nv-Zd6">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="51.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="736" height="51.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28D-1d-p09" userLabel="Term">
-                                                    <rect key="frame" x="8" y="3" width="190" height="45"/>
+                                                    <rect key="frame" x="8" y="3" width="280" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="280" id="Lxl-gj-1d4"/>
                                                         <constraint firstAttribute="width" constant="170" id="Sha-56-WNt">
@@ -608,7 +610,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3n-J7-HnM" userLabel="Definition">
-                                                    <rect key="frame" x="216" y="3" width="190" height="45"/>
+                                                    <rect key="frame" x="126" y="3" width="280" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="190" id="8Ai-5f-Yei"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="8LE-GO-ZOz"/>
@@ -704,25 +706,25 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Bp-kF-mpI">
-                                <rect key="frame" x="0.0" y="102" width="414" height="30"/>
+                                <rect key="frame" x="0.0" y="74" width="736" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCn-bg-MHL" userLabel="Card Num">
-                                <rect key="frame" x="26" y="324" width="42" height="21"/>
+                                <rect key="frame" x="26" y="244" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxZ-7J-IeW">
-                                <rect key="frame" x="85" y="324" width="43" height="21"/>
+                                <rect key="frame" x="85" y="244" width="43" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFr-LZ-y0E">
-                                <rect key="frame" x="142" y="200" width="130" height="34"/>
+                                <rect key="frame" x="142" y="144" width="452" height="34"/>
                                 <state key="normal" title="Study">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -778,26 +780,26 @@
                         <viewControllerLayoutGuide type="bottom" id="k3V-aQ-Rgz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="duP-aS-cwu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KV9-my-vWw">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e2c-7Q-toG" userLabel="Container View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="2208"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="736" height="1242"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RtV-Xl-Bhh" userLabel="CenterScrollView">
-                                                <rect key="frame" x="0.0" y="736" width="414" height="736"/>
+                                                <rect key="frame" x="0.0" y="414" width="736" height="414"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dt4-gf-lST" userLabel="CenterContainerView">
-                                                        <rect key="frame" x="0.0" y="0.0" width="1242" height="736"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="2208" height="414"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GVi-Oi-q4H" userLabel="FlashcardViewL" customClass="FlashcardView" customModule="studyBolt" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cb-WC-x0p" userLabel="DefinitionL">
-                                                                        <rect key="frame" x="81.666666666666686" y="243" width="250" height="250"/>
+                                                                        <rect key="frame" x="242.66666666666669" y="82" width="250.00000000000006" height="250"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="250" id="2Mt-OH-Msw"/>
                                                                             <constraint firstAttribute="height" constant="250" id="tNg-SS-UgQ"/>
@@ -817,10 +819,10 @@
                                                                 </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jEJ-Ex-eba" userLabel="FlashcardView1" customClass="FlashcardView" customModule="studyBolt" customModuleProvider="target">
-                                                                <rect key="frame" x="414" y="0.0" width="414" height="736"/>
+                                                                <rect key="frame" x="736" y="0.0" width="736" height="414"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcj-Q1-Clm" userLabel="TermInFlashcard">
-                                                                        <rect key="frame" x="82" y="243.66666666666663" width="250" height="250.00000000000011"/>
+                                                                        <rect key="frame" x="243" y="82.666666666666686" width="250" height="249.99999999999994"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="250" id="bUO-OF-Rd2"/>
                                                                             <constraint firstAttribute="height" constant="250" id="ug7-fu-PIe"/>
@@ -840,10 +842,10 @@
                                                                 </connections>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FKT-fT-sES" userLabel="FlashcardViewR" customClass="FlashcardView" customModule="studyBolt" customModuleProvider="target">
-                                                                <rect key="frame" x="828" y="0.0" width="414" height="736"/>
+                                                                <rect key="frame" x="1472" y="0.0" width="736" height="414"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XG-UD-USv" userLabel="DefinitionR">
-                                                                        <rect key="frame" x="81.666666666666629" y="243" width="250.00000000000011" height="250"/>
+                                                                        <rect key="frame" x="242.66666666666674" y="82" width="250" height="250"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="250" id="075-TV-Smd"/>
                                                                             <constraint firstAttribute="width" constant="250" id="4uz-ky-Nyc"/>
@@ -868,7 +870,9 @@
                                                             <constraint firstAttribute="trailing" secondItem="FKT-fT-sES" secondAttribute="trailing" id="3Pw-Tm-LEb"/>
                                                             <constraint firstAttribute="bottom" secondItem="GVi-Oi-q4H" secondAttribute="bottom" id="AmX-HE-KkI"/>
                                                             <constraint firstItem="jEJ-Ex-eba" firstAttribute="top" secondItem="dt4-gf-lST" secondAttribute="top" id="Btp-sx-bNL"/>
-                                                            <constraint firstAttribute="width" constant="2001" id="ImB-U9-m7E"/>
+                                                            <constraint firstAttribute="width" constant="2001" id="ImB-U9-m7E">
+                                                                <variation key="heightClass=compact-widthClass=regular" constant="2208"/>
+                                                            </constraint>
                                                             <constraint firstItem="FKT-fT-sES" firstAttribute="top" secondItem="dt4-gf-lST" secondAttribute="top" id="RcY-Fw-xFF"/>
                                                             <constraint firstItem="GVi-Oi-q4H" firstAttribute="leading" secondItem="dt4-gf-lST" secondAttribute="leading" id="TU3-zH-Vfz"/>
                                                             <constraint firstAttribute="bottom" secondItem="jEJ-Ex-eba" secondAttribute="bottom" id="WSe-3N-Old"/>
@@ -930,10 +934,10 @@
                                                 </variation>
                                             </scrollView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tQM-Wo-NNb" userLabel="FlashcardView0" customClass="FlashcardView" customModule="studyBolt" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFn-aw-HoU" userLabel="TermInFlashcard">
-                                                        <rect key="frame" x="82.333333333333314" y="243.33333333333331" width="250" height="249.99999999999994"/>
+                                                        <rect key="frame" x="243.33333333333331" y="82.333333333333314" width="249.99999999999994" height="250"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="250" id="aWI-Jw-Mfw"/>
                                                             <constraint firstAttribute="width" constant="250" id="c6m-O3-Lnl"/>
@@ -953,10 +957,10 @@
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="23F-d8-5py" userLabel="FlashcardView2" customClass="FlashcardView" customModule="studyBolt" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="1472" width="414" height="736"/>
+                                                <rect key="frame" x="0.0" y="828" width="736" height="414"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fi-9X-ZSD" userLabel="TermInFlashcard">
-                                                        <rect key="frame" x="81.666666666666686" y="243" width="250" height="250"/>
+                                                        <rect key="frame" x="242.66666666666669" y="82" width="250.00000000000006" height="250"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="250" id="hSM-Va-cVY"/>
                                                             <constraint firstAttribute="height" constant="250" id="piE-LT-Ob2"/>
@@ -983,7 +987,9 @@
                                             <constraint firstAttribute="height" constant="2001" id="A2U-M7-84q">
                                                 <variation key="heightClass=regular-widthClass=compact" constant="2208"/>
                                             </constraint>
-                                            <constraint firstAttribute="height" constant="1125" id="Fz7-gN-1aV"/>
+                                            <constraint firstAttribute="height" constant="1125" id="Fz7-gN-1aV">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="1242"/>
+                                            </constraint>
                                             <constraint firstItem="tQM-Wo-NNb" firstAttribute="top" secondItem="e2c-7Q-toG" secondAttribute="top" id="GfY-j1-Mpc"/>
                                             <constraint firstItem="RtV-Xl-Bhh" firstAttribute="leading" secondItem="e2c-7Q-toG" secondAttribute="leading" id="KeW-LE-Yen"/>
                                             <constraint firstAttribute="bottom" secondItem="23F-d8-5py" secondAttribute="bottom" id="Tya-m5-8ic"/>
