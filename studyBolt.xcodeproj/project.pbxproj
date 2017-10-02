@@ -312,6 +312,7 @@
 				TargetAttributes = {
 					E703770D1F3C41F500050770 = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = G6WFS77Q76;
 						ProvisioningStyle = Automatic;
 					};
 					E70377241F3C41F600050770 = {
@@ -699,6 +700,7 @@
 			baseConfigurationReference = C8840310DC79286B09BF5434 /* Pods-studyBolt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G6WFS77Q76;
 				INFOPLIST_FILE = studyBolt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naoto.studyBolt;
@@ -713,6 +715,7 @@
 			baseConfigurationReference = 592E9A5BD213AAFFAA693760 /* Pods-studyBolt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = G6WFS77Q76;
 				INFOPLIST_FILE = studyBolt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naoto.studyBolt;
