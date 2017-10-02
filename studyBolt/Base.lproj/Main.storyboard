@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lqi-ke-FZZ" id="pgS-bn-97T">
-                                            <rect key="frame" x="0.0" y="0.0" width="381" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="381" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeF-tf-r6f">
@@ -46,19 +46,19 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="numOfCards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIE-2h-0HN">
-                                                    <rect key="frame" x="102" y="50" width="98" height="21"/>
+                                                    <rect key="frame" x="87" y="50" width="98" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updated:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBn-pj-reK">
-                                                    <rect key="frame" x="157" y="50" width="71" height="21"/>
+                                                    <rect key="frame" x="127" y="50" width="71" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UpdateDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Snb-SZ-OSE">
-                                                    <rect key="frame" x="248" y="50" width="93" height="21"/>
+                                                    <rect key="frame" x="203" y="50" width="93" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -66,10 +66,10 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="fIE-2h-0HN" firstAttribute="top" secondItem="pgS-bn-97T" secondAttribute="top" constant="50" id="4tB-a5-sJa"/>
-                                                <constraint firstItem="fIE-2h-0HN" firstAttribute="leading" secondItem="wYT-Xv-9j0" secondAttribute="trailing" constant="20" id="Gwk-wB-LAm"/>
-                                                <constraint firstItem="Snb-SZ-OSE" firstAttribute="leading" secondItem="rBn-pj-reK" secondAttribute="trailing" constant="20" id="Qvh-mG-abU"/>
+                                                <constraint firstItem="fIE-2h-0HN" firstAttribute="leading" secondItem="wYT-Xv-9j0" secondAttribute="trailing" constant="5" id="Gwk-wB-LAm"/>
+                                                <constraint firstItem="Snb-SZ-OSE" firstAttribute="leading" secondItem="rBn-pj-reK" secondAttribute="trailing" constant="5" id="Qvh-mG-abU"/>
                                                 <constraint firstItem="wYT-Xv-9j0" firstAttribute="leading" secondItem="pgS-bn-97T" secondAttribute="leading" constant="32" id="Ssx-Ji-gSl"/>
-                                                <constraint firstItem="rBn-pj-reK" firstAttribute="leading" secondItem="wYT-Xv-9j0" secondAttribute="trailing" constant="75" id="g2R-co-l0d"/>
+                                                <constraint firstItem="rBn-pj-reK" firstAttribute="leading" secondItem="wYT-Xv-9j0" secondAttribute="trailing" constant="45" id="g2R-co-l0d"/>
                                                 <constraint firstItem="rBn-pj-reK" firstAttribute="top" secondItem="pgS-bn-97T" secondAttribute="top" constant="50" id="jzV-8s-MPS"/>
                                                 <constraint firstItem="wYT-Xv-9j0" firstAttribute="top" secondItem="pgS-bn-97T" secondAttribute="top" constant="50" id="klW-vG-Y6a"/>
                                                 <constraint firstItem="HeF-tf-r6f" firstAttribute="top" secondItem="pgS-bn-97T" secondAttribute="top" constant="10" id="qvI-J0-9T4"/>
@@ -439,7 +439,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fCq-ar-3Yg" id="Yl7-Nv-Zd6">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="51.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3n-J7-HnM" userLabel="Definition">
