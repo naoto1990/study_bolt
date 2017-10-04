@@ -43,6 +43,9 @@ class FlashcardViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(FlashcardViewController.onOrientationChange), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
         
+        scrollView.showsVerticalScrollIndicator = false
+        centerScrollView.showsHorizontalScrollIndicator = false
+        
         updateLabels()
         updateLabelsInLeftAndRight()
         
