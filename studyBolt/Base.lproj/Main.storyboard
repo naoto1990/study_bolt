@@ -432,7 +432,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q0l-KZ-DQL">
-                                <rect key="frame" x="0.0" y="315" width="414" height="421"/>
+                                <rect key="frame" x="0.0" y="349" width="414" height="387"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cardsCell" rowHeight="52" id="fCq-ar-3Yg" customClass="CardCellInStudySet" customModule="studyBolt" customModuleProvider="target">
@@ -549,9 +549,6 @@
                             <constraint firstItem="OFr-LZ-y0E" firstAttribute="top" secondItem="9Bp-kF-mpI" secondAttribute="bottom" constant="68" id="69J-8t-5MZ">
                                 <variation key="heightClass=compact" constant="40"/>
                             </constraint>
-                            <constraint firstItem="Q0l-KZ-DQL" firstAttribute="top" secondItem="sbh-ly-4yl" secondAttribute="bottom" constant="251" id="9qn-82-TBj">
-                                <variation key="heightClass=compact" constant="200"/>
-                            </constraint>
                             <constraint firstItem="9Bp-kF-mpI" firstAttribute="top" secondItem="sbh-ly-4yl" secondAttribute="bottom" constant="38" id="FCa-tZ-1me">
                                 <variation key="heightClass=compact" constant="10"/>
                             </constraint>
@@ -562,6 +559,7 @@
                                 <variation key="heightClass=compact" constant="180"/>
                             </constraint>
                             <constraint firstItem="9Bp-kF-mpI" firstAttribute="leading" secondItem="GaT-m2-4ib" secondAttribute="leading" id="aM1-Dv-e1W"/>
+                            <constraint firstItem="Q0l-KZ-DQL" firstAttribute="top" secondItem="OFr-LZ-y0E" secondAttribute="bottom" constant="115" id="ega-oT-QxC"/>
                             <constraint firstAttribute="trailing" secondItem="OFr-LZ-y0E" secondAttribute="trailing" constant="142" id="l0w-P5-XW3"/>
                             <constraint firstAttribute="trailing" secondItem="Q0l-KZ-DQL" secondAttribute="trailing" id="pXX-JP-rFr"/>
                             <constraint firstAttribute="trailing" secondItem="9Bp-kF-mpI" secondAttribute="trailing" id="s30-21-V8J"/>
