@@ -29,6 +29,7 @@
 		E75325481F62947E00ED9FF0 /* FlashcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75325471F62947E00ED9FF0 /* FlashcardViewController.swift */; };
 		E753254A1F6669FB00ED9FF0 /* FlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75325491F6669FB00ED9FF0 /* FlashcardView.swift */; };
 		E7D2F8091F58ED6E0000E33A /* ExperimentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D2F8081F58ED6E0000E33A /* ExperimentViewController.swift */; };
+		E7EC068A1F84C1C900AF1B6F /* ColorPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EC06891F84C1C900AF1B6F /* ColorPattern.swift */; };
 		F69BA9538B40E7EBA7E5ED6F /* Pods_studyBolt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245C501577B9EBAA107EA504 /* Pods_studyBolt.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		E75325471F62947E00ED9FF0 /* FlashcardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardViewController.swift; sourceTree = "<group>"; };
 		E75325491F6669FB00ED9FF0 /* FlashcardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardView.swift; sourceTree = "<group>"; };
 		E7D2F8081F58ED6E0000E33A /* ExperimentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperimentViewController.swift; sourceTree = "<group>"; };
+		E7EC06891F84C1C900AF1B6F /* ColorPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPattern.swift; sourceTree = "<group>"; };
 		E9BD954CC95B0D820CA8EB4A /* Pods-studyBoltUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studyBoltUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-studyBoltUITests/Pods-studyBoltUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F3134795FA8412E14E8249BB /* Pods-studyBoltTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studyBoltTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-studyBoltTests/Pods-studyBoltTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F55909F32D73543E3B479373 /* Pods_studyBoltUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_studyBoltUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +164,7 @@
 		E70377101F3C41F500050770 /* studyBolt */ = {
 			isa = PBXGroup;
 			children = (
+				E7EC06881F84C18500AF1B6F /* Config */,
 				E703774F1F46DB4900050770 /* Models */,
 				E70377451F45828D00050770 /* Views */,
 				E70377421F3C45F300050770 /* ViewController */,
@@ -233,6 +236,14 @@
 				E70377551F4EA05100050770 /* Card.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		E7EC06881F84C18500AF1B6F /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				E7EC06891F84C1C900AF1B6F /* ColorPattern.swift */,
+			);
+			name = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -535,6 +546,7 @@
 			files = (
 				E703771A1F3C41F600050770 /* studyBolt.xcdatamodeld in Sources */,
 				E70377121F3C41F500050770 /* AppDelegate.swift in Sources */,
+				E7EC068A1F84C1C900AF1B6F /* ColorPattern.swift in Sources */,
 				E753254A1F6669FB00ED9FF0 /* FlashcardView.swift in Sources */,
 				E75325461F625FA600ED9FF0 /* CardCellInStudySet.swift in Sources */,
 				E70377581F4EE15000050770 /* CreateCardView.swift in Sources */,
