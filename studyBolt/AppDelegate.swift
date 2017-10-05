@@ -8,11 +8,14 @@
 
 import UIKit
 import CoreData
+import FacebookCore
+import FacebookLogin
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var loginFlag: Bool?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -22,7 +25,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         UINavigationBar.appearance().isTranslucent = false
         
+        //Facebook初期化
+        SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        loginFlag = isLoggedInWithFacebook()
+        
         return true
+    }
+    
+    // FacebookLoginの実装に伴い追加
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        return SDKApplicationDelegate.shared.application(app, open: url, options: options)
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -79,7 +94,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
 
     // MARK: - Core Data Saving support
-
     func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
@@ -92,6 +106,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    // MARK: - Facebook Login
+    func isLoggedInWithFacebook() -> Bool {
+        let loggedIn = AccessToken.current != nil
+        return loggedIn
     }
 
 }
