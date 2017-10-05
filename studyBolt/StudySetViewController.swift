@@ -14,6 +14,7 @@ class StudySetViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var totalCardLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var studyButton: UIButton!
     
     let realm = try! Realm()
     var selectedStudySet: StudySet?
@@ -32,6 +33,10 @@ class StudySetViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // UIButton内のUIImageViewのサイズをUIButtonと同じサイズに設定
+        studyButton.contentHorizontalAlignment = .fill
+        studyButton.contentVerticalAlignment = .fill
         
         fetchCardData()
         self.tableView.reloadData()
