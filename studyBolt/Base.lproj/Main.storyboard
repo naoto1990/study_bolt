@@ -432,7 +432,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q0l-KZ-DQL">
-                                <rect key="frame" x="0.0" y="349" width="414" height="387"/>
+                                <rect key="frame" x="0.0" y="357" width="414" height="379"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cardsCell" rowHeight="52" id="fCq-ar-3Yg" customClass="CardCellInStudySet" customModule="studyBolt" customModuleProvider="target">
@@ -531,8 +531,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFr-LZ-y0E">
-                                <rect key="frame" x="142" y="200" width="130" height="34"/>
-                                <state key="normal" title="Study">
+                                <rect key="frame" x="142" y="160" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="SeA-nv-F7b"/>
+                                </constraints>
+                                <state key="normal" image="Study button">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -546,9 +549,6 @@
                             <constraint firstItem="mCn-bg-MHL" firstAttribute="top" secondItem="sbh-ly-4yl" secondAttribute="bottom" constant="260" id="3U1-Lu-Va9">
                                 <variation key="heightClass=compact" constant="180"/>
                             </constraint>
-                            <constraint firstItem="OFr-LZ-y0E" firstAttribute="top" secondItem="9Bp-kF-mpI" secondAttribute="bottom" constant="68" id="69J-8t-5MZ">
-                                <variation key="heightClass=compact" constant="40"/>
-                            </constraint>
                             <constraint firstItem="9Bp-kF-mpI" firstAttribute="top" secondItem="sbh-ly-4yl" secondAttribute="bottom" constant="38" id="FCa-tZ-1me">
                                 <variation key="heightClass=compact" constant="10"/>
                             </constraint>
@@ -558,8 +558,9 @@
                             <constraint firstItem="rxZ-7J-IeW" firstAttribute="top" secondItem="sbh-ly-4yl" secondAttribute="bottom" constant="260" id="U3R-cR-ri0">
                                 <variation key="heightClass=compact" constant="180"/>
                             </constraint>
+                            <constraint firstItem="Q0l-KZ-DQL" firstAttribute="top" secondItem="rxZ-7J-IeW" secondAttribute="bottom" constant="12" id="XyK-kI-RFD"/>
                             <constraint firstItem="9Bp-kF-mpI" firstAttribute="leading" secondItem="GaT-m2-4ib" secondAttribute="leading" id="aM1-Dv-e1W"/>
-                            <constraint firstItem="Q0l-KZ-DQL" firstAttribute="top" secondItem="OFr-LZ-y0E" secondAttribute="bottom" constant="115" id="ega-oT-QxC"/>
+                            <constraint firstItem="OFr-LZ-y0E" firstAttribute="top" secondItem="9Bp-kF-mpI" secondAttribute="bottom" constant="28" id="f2t-rN-E7j"/>
                             <constraint firstAttribute="trailing" secondItem="OFr-LZ-y0E" secondAttribute="trailing" constant="142" id="l0w-P5-XW3"/>
                             <constraint firstAttribute="trailing" secondItem="Q0l-KZ-DQL" secondAttribute="trailing" id="pXX-JP-rFr"/>
                             <constraint firstAttribute="trailing" secondItem="9Bp-kF-mpI" secondAttribute="trailing" id="s30-21-V8J"/>
@@ -567,6 +568,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="studyButton" destination="OFr-LZ-y0E" id="chb-d7-yRd"/>
                         <outlet property="tableView" destination="Q0l-KZ-DQL" id="tl9-bO-Zq6"/>
                         <outlet property="titleLabel" destination="9Bp-kF-mpI" id="aCA-R1-CIf"/>
                         <outlet property="totalCardLabel" destination="mCn-bg-MHL" id="q17-yH-HlJ"/>
@@ -973,7 +975,8 @@
     <resources>
         <image name="Explore" width="16" height="16"/>
         <image name="Home" width="16" height="16"/>
-        <image name="Setting" width="21" height="21"/>
+        <image name="Setting" width="24" height="24"/>
+        <image name="Study button" width="42" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="gMc-MK-anw"/>
