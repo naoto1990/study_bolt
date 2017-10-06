@@ -39,7 +39,7 @@ class LoginViewController: UIViewController {
 
         let loginButton = LoginButton(readPermissions: [ .publicProfile ])
         loginButton.center = view.center
-        loginButton.addTarget(self, action: "login", forControlEvents: UIControlEvents.TouchUpInside)
+//        loginButton.addTarget(self, action: "login", forControlEvents: UIControlEvents.TouchUpInside)
         
         view.addSubview(loginButton)
     }
