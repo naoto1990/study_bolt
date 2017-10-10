@@ -13,7 +13,7 @@
         <!--Home-->
         <scene sceneID="v66-rO-Sb9">
             <objects>
-                <viewController storyboardIdentifier="Home" automaticallyAdjustsScrollViewInsets="NO" id="MQb-Bt-6qS" userLabel="Home" customClass="HomeViewController" customModule="studyBolt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeView" automaticallyAdjustsScrollViewInsets="NO" id="MQb-Bt-6qS" userLabel="Home" customClass="HomeViewController" customModule="studyBolt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eZg-K7-Enk"/>
                         <viewControllerLayoutGuide type="bottom" id="Ygn-yc-YeY"/>
@@ -133,7 +133,7 @@
         <!--Setting-->
         <scene sceneID="ZBt-9K-78T">
             <objects>
-                <viewController id="8c8-m9-V8t" sceneMemberID="viewController">
+                <viewController id="8c8-m9-V8t" customClass="SettingViewController" customModule="studyBolt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WwS-OQ-9od"/>
                         <viewControllerLayoutGuide type="bottom" id="a2Y-7W-9wQ"/>
@@ -141,13 +141,23 @@
                     <view key="view" contentMode="scaleToFill" id="rVG-cN-PAi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOD-RV-mr9">
+                                <rect key="frame" x="153" y="294" width="82" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logout:" destination="8c8-m9-V8t" eventType="touchUpInside" id="CB5-FI-nHP"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Setting" id="tye-yf-MIo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Llo-Dn-WKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1044" y="513"/>
+            <point key="canvasLocation" x="1044" y="512.29385307346331"/>
         </scene>
         <!--Create set-->
         <scene sceneID="nhH-K5-jah">
@@ -976,13 +986,13 @@
                                 <rect key="frame" x="164" y="617" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Home"/>
-                                <connections>
-                                    <segue destination="ZWc-zq-Ivm" kind="show" id="EEH-dh-uab"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="ZWc-zq-Ivm" kind="show" identifier="toTabBarController" id="s4y-1j-LfH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DJz-Q0-Uo4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1015,6 +1025,6 @@
         <image name="Study button" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gMc-MK-anw"/>
+        <segue reference="kj2-g9-c6M"/>
     </inferredMetricsTieBreakers>
 </document>

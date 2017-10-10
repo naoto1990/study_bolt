@@ -31,6 +31,7 @@
 		E7D2F8091F58ED6E0000E33A /* ExperimentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D2F8081F58ED6E0000E33A /* ExperimentViewController.swift */; };
 		E7EC068A1F84C1C900AF1B6F /* ColorPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EC06891F84C1C900AF1B6F /* ColorPattern.swift */; };
 		E7EC068C1F85DB7E00AF1B6F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EC068B1F85DB7E00AF1B6F /* LoginViewController.swift */; };
+		E7EC068E1F8C6BCF00AF1B6F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EC068D1F8C6BCF00AF1B6F /* SettingViewController.swift */; };
 		F69BA9538B40E7EBA7E5ED6F /* Pods_studyBolt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245C501577B9EBAA107EA504 /* Pods_studyBolt.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		E7D2F8081F58ED6E0000E33A /* ExperimentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperimentViewController.swift; sourceTree = "<group>"; };
 		E7EC06891F84C1C900AF1B6F /* ColorPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPattern.swift; sourceTree = "<group>"; };
 		E7EC068B1F85DB7E00AF1B6F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E7EC068D1F8C6BCF00AF1B6F /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		E9BD954CC95B0D820CA8EB4A /* Pods-studyBoltUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studyBoltUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-studyBoltUITests/Pods-studyBoltUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F3134795FA8412E14E8249BB /* Pods-studyBoltTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studyBoltTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-studyBoltTests/Pods-studyBoltTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F55909F32D73543E3B479373 /* Pods_studyBoltUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_studyBoltUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,6 +210,7 @@
 				E75325411F62362A00ED9FF0 /* StudySetViewController.swift */,
 				E75325471F62947E00ED9FF0 /* FlashcardViewController.swift */,
 				E7EC068B1F85DB7E00AF1B6F /* LoginViewController.swift */,
+				E7EC068D1F8C6BCF00AF1B6F /* SettingViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 				E703771A1F3C41F600050770 /* studyBolt.xcdatamodeld in Sources */,
 				E70377121F3C41F500050770 /* AppDelegate.swift in Sources */,
 				E7EC068A1F84C1C900AF1B6F /* ColorPattern.swift in Sources */,
+				E7EC068E1F8C6BCF00AF1B6F /* SettingViewController.swift in Sources */,
 				E7EC068C1F85DB7E00AF1B6F /* LoginViewController.swift in Sources */,
 				E753254A1F6669FB00ED9FF0 /* FlashcardView.swift in Sources */,
 				E75325461F625FA600ED9FF0 /* CardCellInStudySet.swift in Sources */,
