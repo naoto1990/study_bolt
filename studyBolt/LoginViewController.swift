@@ -43,7 +43,6 @@ class LoginViewController: UIViewController {
         
         return loggedIn
     }
-    }
 
 }
 extension LoginViewController: LoginButtonDelegate {
