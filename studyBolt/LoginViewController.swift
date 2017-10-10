@@ -15,8 +15,7 @@ import FBSDKLoginKit
 class LoginViewController: UIViewController {
     
     @IBAction func isLoggedInWithFB(_ sender: Any) {
-        let loggedIn = AccessToken.current != nil
-        if loggedIn {
+        if isLoggedInWithFacebook() {
             print("Logged in")
         } else {
             print("Not logged in")
