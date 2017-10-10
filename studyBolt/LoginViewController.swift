@@ -38,6 +38,8 @@ class LoginViewController: UIViewController {
     }
 
 }
+
+
 extension LoginViewController: LoginButtonDelegate {
     func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
         print("######Logged in######")
