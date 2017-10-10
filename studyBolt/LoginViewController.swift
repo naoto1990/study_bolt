@@ -14,16 +14,6 @@ import FBSDKLoginKit
 
 class LoginViewController: UIViewController {
     
-    @IBAction func isLoggedInWithFB(_ sender: Any) {
-        if isLoggedInWithFacebook() {
-            print("Logged in")
-        } else {
-            print("Not logged in")
-        }
-        
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,6 +21,7 @@ class LoginViewController: UIViewController {
         loginButton.delegate = self
         loginButton.center = view.center
         view.addSubview(loginButton)
+        
     }
 
     override func didReceiveMemoryWarning() {
