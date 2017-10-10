@@ -9,6 +9,8 @@
 import UIKit
 import FacebookCore
 import FacebookLogin
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class LoginViewController: UIViewController {
     
@@ -27,6 +29,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         let loginButton = LoginButton(readPermissions: [ .publicProfile ])
+        loginButton.delegate = self
         loginButton.center = view.center
         view.addSubview(loginButton)
     }
@@ -38,4 +41,14 @@ class LoginViewController: UIViewController {
     
     }
 
+}
+extension LoginViewController: LoginButtonDelegate {
+    func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
+        print("######Logged in######")
+        self.performSegue(withIdentifier: "toTabBarController", sender: nil)
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: LoginButton) {
+        print("######Logged out######")
+    }
 }
