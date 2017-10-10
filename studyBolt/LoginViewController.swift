@@ -38,6 +38,11 @@ class LoginViewController: UIViewController {
         
     }
     
+    func isLoggedInWithFacebook() -> Bool {
+        let loggedIn = AccessToken.current != nil
+        
+        return loggedIn
+    }
     }
 
 }
