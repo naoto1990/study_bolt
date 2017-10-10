@@ -18,9 +18,11 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         let loginButton = LoginButton(readPermissions: [ .publicProfile ])
-        loginButton.delegate = self
-        loginButton.center = view.center
+        let newCenter = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height - 180)
+        loginButton.center = newCenter
         view.addSubview(loginButton)
+        
+        loginButton.delegate = self
         
     }
 
