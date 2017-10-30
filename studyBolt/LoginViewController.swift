@@ -43,7 +43,12 @@ class LoginViewController: UIViewController {
 extension LoginViewController: LoginButtonDelegate {
     func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
         print("######Logged in######")
-        self.performSegue(withIdentifier: "toTabBarController", sender: nil)
+        OperationQueue.main.addOperation {
+            [weak self] in
+            let storyboard: UIStoryboard = self!.storyboard!
+            let nextView = storyboard.instantiateViewController(withIdentifier: "tabBarView")
+            self?.present(nextView, animated: true, completion: nil)
+        }
     }
     
     func loginButtonDidLogOut(_ loginButton: LoginButton) {
