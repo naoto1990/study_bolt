@@ -13,9 +13,9 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 
 
-var TableTitle = [ ["menuTitle01", "title01", "title02"], ["menuTitle02", "title03", "title04"], ["menuTitle03", "menuTitle05", "menuTitle06"], ["menuTitle04", "menuTitle07"] ]
+var TableTitle = [ ["Account", "Logout"] ]
 
-var TableSubtitle = [ ["", "subtitle02", "subtitle03"], ["","subtitle05", "subtitle06"], ["", "subtitle06", "subtitle07"], ["", "subtitle08"] ]
+var TableSubtitle = [ ["", "Logout button"] ]
 
 
 class SettingViewController: UIViewController {
@@ -69,7 +69,7 @@ extension SettingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "settingCell")
         cell.textLabel?.text = TableTitle[indexPath.section][indexPath.row + 1]
-        cell.textLabel?.text = TableTitle[indexPath.section][indexPath.row + 1]
+        cell.detailTextLabel?.text = TableSubtitle[indexPath.section][indexPath.row + 1]
         
         return cell
     }
