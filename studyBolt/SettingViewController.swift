@@ -15,7 +15,7 @@ import FBSDKLoginKit
 
 var TableTitle = [ ["Account", "Logout"] ]
 
-var TableSubtitle = [ ["", "Logout button"] ]
+var TableSubtitle = [ ["", ""] ]
 
 
 class SettingViewController: UIViewController {
@@ -90,6 +90,16 @@ extension SettingViewController: UITableViewDataSource {
 extension SettingViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Logout cell clicked")
         
+        let loginManager = FBSDKLoginManager()
+        loginManager.logOut()
+        print(FBSDKAccessToken.current())
+        
+        if FBSDKAccessToken.current() == nil {
+            let storyboard: UIStoryboard = self.storyboard!
+            let nextView = storyboard.instantiateViewController(withIdentifier: "loginView") as! LoginViewController
+            self.present(nextView, animated: true, completion: nil)
+        }
     }
 }
