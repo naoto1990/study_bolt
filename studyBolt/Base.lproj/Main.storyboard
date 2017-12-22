@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aM0-tq-BDX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aM0-tq-BDX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -141,9 +141,34 @@
                     <view key="view" contentMode="scaleToFill" id="rVG-cN-PAi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Dut-HP-Izc">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingCell" id="HDB-9x-xSI">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HDB-9x-xSI" id="PPL-Uj-vu5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Dut-HP-Izc" secondAttribute="trailing" id="7nr-qR-vSv"/>
+                            <constraint firstItem="Dut-HP-Izc" firstAttribute="leading" secondItem="rVG-cN-PAi" secondAttribute="leading" id="VSM-I1-iOm"/>
+                            <constraint firstItem="Dut-HP-Izc" firstAttribute="top" secondItem="WwS-OQ-9od" secondAttribute="bottom" id="cKq-3N-OhU"/>
+                            <constraint firstItem="a2Y-7W-9wQ" firstAttribute="top" secondItem="Dut-HP-Izc" secondAttribute="bottom" id="yNU-kQ-ZgL"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Setting" id="tye-yf-MIo"/>
+                    <connections>
+                        <outlet property="tableView" destination="Dut-HP-Izc" id="vY1-Ny-fg8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Llo-Dn-WKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -955,7 +980,7 @@
         <!--Login View Controller-->
         <scene sceneID="kgy-lD-g0d">
             <objects>
-                <viewController id="aM0-tq-BDX" customClass="LoginViewController" customModule="studyBolt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginView" id="aM0-tq-BDX" customClass="LoginViewController" customModule="studyBolt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cfR-Ar-Mbz"/>
                         <viewControllerLayoutGuide type="bottom" id="jPa-hI-16H"/>
