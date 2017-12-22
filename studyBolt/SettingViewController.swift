@@ -27,11 +27,6 @@ class SettingViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        
-        let loginButton = LoginButton(readPermissions: [ .publicProfile ])
-        loginButton.delegate = self
-        loginButton.center = view.center
-        view.addSubview(loginButton)
 
     }
 
