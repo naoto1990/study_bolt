@@ -16,7 +16,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let loginButton = LoginButton(readPermissions: [ .publicProfile ])
         let newCenter = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height - 180)
         loginButton.center = newCenter
@@ -24,6 +24,15 @@ class LoginViewController: UIViewController {
         
         loginButton.delegate = self
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // 既にログイン済みの場合は、Home画面へ遷移
+        if FBSDKAccessToken.current() !== nil {
+            let storyboard: UIStoryboard = self.storyboard!
+            let nextView = storyboard.instantiateViewController(withIdentifier: "tabBarView") as! UITabBarController
+            self.present(nextView, animated: true, completion: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {
