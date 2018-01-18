@@ -28,6 +28,7 @@
 		E75325461F625FA600ED9FF0 /* CardCellInStudySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75325451F625FA600ED9FF0 /* CardCellInStudySet.swift */; };
 		E75325481F62947E00ED9FF0 /* FlashcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75325471F62947E00ED9FF0 /* FlashcardViewController.swift */; };
 		E753254A1F6669FB00ED9FF0 /* FlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75325491F6669FB00ED9FF0 /* FlashcardView.swift */; };
+		E7CBF67B2010A15400D23493 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E7CBF67A2010A15400D23493 /* GoogleService-Info.plist */; };
 		E7EC068A1F84C1C900AF1B6F /* ColorPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EC06891F84C1C900AF1B6F /* ColorPattern.swift */; };
 		E7EC068C1F85DB7E00AF1B6F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EC068B1F85DB7E00AF1B6F /* LoginViewController.swift */; };
 		E7EC068E1F8C6BCF00AF1B6F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EC068D1F8C6BCF00AF1B6F /* SettingViewController.swift */; };
@@ -82,6 +83,7 @@
 		E75325451F625FA600ED9FF0 /* CardCellInStudySet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCellInStudySet.swift; sourceTree = "<group>"; };
 		E75325471F62947E00ED9FF0 /* FlashcardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardViewController.swift; sourceTree = "<group>"; };
 		E75325491F6669FB00ED9FF0 /* FlashcardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardView.swift; sourceTree = "<group>"; };
+		E7CBF67A2010A15400D23493 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E7EC06891F84C1C900AF1B6F /* ColorPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPattern.swift; sourceTree = "<group>"; };
 		E7EC068B1F85DB7E00AF1B6F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E7EC068D1F8C6BCF00AF1B6F /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				E703771B1F3C41F600050770 /* Assets.xcassets */,
 				E703771D1F3C41F600050770 /* LaunchScreen.storyboard */,
 				E70377201F3C41F600050770 /* Info.plist */,
+				E7CBF67A2010A15400D23493 /* GoogleService-Info.plist */,
 				E70377181F3C41F600050770 /* studyBolt.xcdatamodeld */,
 			);
 			path = studyBolt;
@@ -368,6 +371,7 @@
 			files = (
 				E70377501F46E7B700050770 /* testDeck.json in Resources */,
 				E703771F1F3C41F600050770 /* LaunchScreen.storyboard in Resources */,
+				E7CBF67B2010A15400D23493 /* GoogleService-Info.plist in Resources */,
 				E703771C1F3C41F600050770 /* Assets.xcassets in Resources */,
 				E70377171F3C41F500050770 /* Main.storyboard in Resources */,
 			);
@@ -532,8 +536,10 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -542,8 +548,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

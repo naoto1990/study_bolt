@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import FacebookCore
 import FacebookLogin
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,8 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Facebook初期化
         SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
-        
         loginFlag = isLoggedInWithFacebook()
+        
+        //Firebase初期化
+        FirebaseApp.configure()
         
         return true
     }

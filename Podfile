@@ -9,6 +9,7 @@ target 'studyBolt' do
 pod 'RealmSwift'
 pod 'FacebookCore'
 pod 'FacebookLogin'
+pod 'Firebase/Core'
 
   target 'studyBoltTests' do
     inherit! :search_paths
