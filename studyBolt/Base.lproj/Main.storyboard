@@ -659,6 +659,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
                                                                     <constraint firstItem="8cb-WC-x0p" firstAttribute="centerX" secondItem="GVi-Oi-q4H" secondAttribute="centerX" id="BVL-F2-lcI"/>
                                                                     <constraint firstItem="8cb-WC-x0p" firstAttribute="centerY" secondItem="GVi-Oi-q4H" secondAttribute="centerY" id="xTC-1r-h4D"/>
@@ -682,6 +683,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
                                                                     <constraint firstItem="lcj-Q1-Clm" firstAttribute="centerX" secondItem="jEJ-Ex-eba" secondAttribute="centerX" id="JXT-H7-3GI"/>
                                                                     <constraint firstItem="lcj-Q1-Clm" firstAttribute="centerY" secondItem="jEJ-Ex-eba" secondAttribute="centerY" id="KPH-Oo-bhN"/>
@@ -705,6 +707,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
                                                                     <constraint firstItem="8XG-UD-USv" firstAttribute="centerX" secondItem="FKT-fT-sES" secondAttribute="centerX" id="gTK-e2-5om"/>
                                                                     <constraint firstItem="8XG-UD-USv" firstAttribute="centerY" secondItem="FKT-fT-sES" secondAttribute="centerY" id="iHQ-zy-eho"/>
@@ -729,7 +732,7 @@
                                                         </constraints>
                                                     </view>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.12913991934746538" green="1" blue="0.8928282055544805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="dt4-gf-lST" secondAttribute="bottom" id="Avk-KS-JEx"/>
                                                     <constraint firstItem="dt4-gf-lST" firstAttribute="top" secondItem="RtV-Xl-Bhh" secondAttribute="top" id="D9b-1k-7y4"/>
@@ -834,6 +837,7 @@
                                         </variation>
                                     </view>
                                 </subviews>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="GVi-Oi-q4H" firstAttribute="height" secondItem="KV9-my-vWw" secondAttribute="height" id="1eo-fF-2XH"/>
                                     <constraint firstItem="jEJ-Ex-eba" firstAttribute="height" secondItem="KV9-my-vWw" secondAttribute="height" id="247-Y2-I9k"/>
