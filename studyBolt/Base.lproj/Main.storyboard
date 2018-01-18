@@ -435,14 +435,31 @@
                     <view key="view" contentMode="scaleToFill" id="g3b-yy-lrb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="coming soon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kZ-Yy-OVL">
+                                <rect key="frame" x="91.5" y="179" width="192.5" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" white="0.3962312375" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coming soon" translatesAutoresizingMaskIntoConstraints="NO" id="dG4-jB-R70">
+                                <rect key="frame" x="163.5" y="277" width="48" height="48"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8kZ-Yy-OVL" firstAttribute="top" secondItem="yma-ra-GwZ" secondAttribute="bottom" constant="115" id="Djh-BT-TWG"/>
+                            <constraint firstItem="dG4-jB-R70" firstAttribute="centerX" secondItem="g3b-yy-lrb" secondAttribute="centerX" id="MRI-LL-MAj"/>
+                            <constraint firstItem="8kZ-Yy-OVL" firstAttribute="centerX" secondItem="g3b-yy-lrb" secondAttribute="centerX" id="ZuY-ED-kDD"/>
+                            <constraint firstItem="dG4-jB-R70" firstAttribute="top" secondItem="8kZ-Yy-OVL" secondAttribute="bottom" constant="56" id="xKb-RL-ppg"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Explore" image="Explore" id="96P-1Z-XdO"/>
-                    <navigationItem key="navigationItem" id="D11-zO-70k"/>
+                    <navigationItem key="navigationItem" title="Explore" id="D11-zO-70k"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uD5-sP-htk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1044" y="-931"/>
+            <point key="canvasLocation" x="1044" y="-931.48425787106453"/>
         </scene>
         <!--Study-->
         <scene sceneID="lhP-0g-emU">
@@ -1028,12 +1045,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Coming soon" width="48" height="48"/>
         <image name="Explore" width="25" height="25"/>
         <image name="Home" width="25" height="25"/>
         <image name="Setting" width="24" height="24"/>
         <image name="Study button" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kj2-g9-c6M"/>
+        <segue reference="gMc-MK-anw"/>
     </inferredMetricsTieBreakers>
 </document>
