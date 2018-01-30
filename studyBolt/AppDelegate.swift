@@ -11,6 +11,7 @@ import CoreData
 import FacebookCore
 import FacebookLogin
 import Firebase
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,12 +27,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         UINavigationBar.appearance().isTranslucent = false
         
-        //Facebook初期化
+        // Facebook初期化
         SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         loginFlag = isLoggedInWithFacebook()
         
         //Firebase初期化
         FirebaseApp.configure()
+        
+        // Google Mobile Ads SDK初期化(テスト用IDを使用)
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-3940256099942544/2934735716")
         
         return true
     }
