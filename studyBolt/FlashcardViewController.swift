@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import GoogleMobileAds
 
 class FlashcardViewController: UIViewController {
     
@@ -29,11 +30,22 @@ class FlashcardViewController: UIViewController {
     // カードの現在ポジションを表す値
     var cardIndex = 0
     
+    var bannerView: GADBannerView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         scrollView.delegate = self
+        
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        addBannerViewToView(bannerView)
+        
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        bannerView.delegate = self
+        view.addSubview(bannerView)
         
     }
     
@@ -72,6 +84,27 @@ class FlashcardViewController: UIViewController {
             
         }
         
+    }
+    
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        view.addConstraints(
+            [NSLayoutConstraint(item: bannerView,
+                                attribute: .bottom,
+                                relatedBy: .equal,
+                                toItem: bottomLayoutGuide,
+                                attribute: .top,
+                                multiplier: 1,
+                                constant: 0),
+             NSLayoutConstraint(item: bannerView,
+                                attribute: .centerX,
+                                relatedBy: .equal,
+                                toItem: view,
+                                attribute: .centerX,
+                                multiplier: 1,
+                                constant: 0)
+            ])
     }
 
 }
@@ -186,5 +219,9 @@ extension FlashcardViewController: UIScrollViewDelegate {
             updateLocking()
         }
     }
+    
+}
+
+extension FlashcardViewController: GADBannerViewDelegate {
     
 }
