@@ -1016,8 +1016,8 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Login icon" translatesAutoresizingMaskIntoConstraints="NO" id="4eN-4x-tce">
-                                <rect key="frame" x="113" y="258" width="150" height="150"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login icon" translatesAutoresizingMaskIntoConstraints="NO" id="4eN-4x-tce">
+                                <rect key="frame" x="143" y="288" width="90" height="90"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.44705882352941173" green="0.32156862745098036" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
