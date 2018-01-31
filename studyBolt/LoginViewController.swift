@@ -34,6 +34,10 @@ class LoginViewController: UIViewController {
             self.present(nextView, animated: true, completion: nil)
         }
     }
+    
+    override open var shouldAutorotate: Bool {
+        return false
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
