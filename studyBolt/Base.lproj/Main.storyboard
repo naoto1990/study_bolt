@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="120" width="375" height="498"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="studySetsCell" id="lqi-ke-FZZ" customClass="StudySetsCell" customModule="studyBolt" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="studySetsCell" id="lqi-ke-FZZ" customClass="StudySetsCell" customModule="studyBolt" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lqi-ke-FZZ" id="pgS-bn-97T">
@@ -146,7 +146,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingCell" id="HDB-9x-xSI">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingCell" id="HDB-9x-xSI">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HDB-9x-xSI" id="PPL-Uj-vu5">
@@ -477,7 +477,7 @@
                                 <rect key="frame" x="0.0" y="357" width="375" height="310"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cardsCell" rowHeight="52" id="fCq-ar-3Yg" customClass="CardCellInStudySet" customModule="studyBolt" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cardsCell" rowHeight="52" id="fCq-ar-3Yg" customClass="CardCellInStudySet" customModule="studyBolt" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fCq-ar-3Yg" id="Yl7-Nv-Zd6">
@@ -1011,13 +1011,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Study Bolt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgm-HC-FfW">
-                                <rect key="frame" x="87.5" y="120" width="201" height="48"/>
+                                <rect key="frame" x="87" y="120" width="201" height="48"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login icon" translatesAutoresizingMaskIntoConstraints="NO" id="4eN-4x-tce">
-                                <rect key="frame" x="143" y="288" width="90" height="90"/>
+                                <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.44705882352941173" green="0.32156862745098036" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
@@ -1057,7 +1057,7 @@
         <image name="Coming soon" width="48" height="48"/>
         <image name="Explore" width="25" height="25"/>
         <image name="Home" width="25" height="25"/>
-        <image name="Login icon" width="90" height="90"/>
+        <image name="Login icon" width="300" height="300"/>
         <image name="Setting" width="24" height="24"/>
         <image name="Study button" width="64" height="64"/>
     </resources>
