@@ -405,7 +405,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="HDn-fD-4ZD">
+                    <navigationItem key="navigationItem" title="Create" id="HDn-fD-4ZD">
                         <barButtonItem key="rightBarButtonItem" title="save" id="LJn-s1-XHN">
                             <connections>
                                 <action selector="createStudySet:" destination="b2a-cd-7ko" id="8Cr-uf-876"/>
@@ -659,6 +659,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
                                                                     <constraint firstItem="8cb-WC-x0p" firstAttribute="centerX" secondItem="GVi-Oi-q4H" secondAttribute="centerX" id="BVL-F2-lcI"/>
                                                                     <constraint firstItem="8cb-WC-x0p" firstAttribute="centerY" secondItem="GVi-Oi-q4H" secondAttribute="centerY" id="xTC-1r-h4D"/>
@@ -682,6 +683,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
                                                                     <constraint firstItem="lcj-Q1-Clm" firstAttribute="centerX" secondItem="jEJ-Ex-eba" secondAttribute="centerX" id="JXT-H7-3GI"/>
                                                                     <constraint firstItem="lcj-Q1-Clm" firstAttribute="centerY" secondItem="jEJ-Ex-eba" secondAttribute="centerY" id="KPH-Oo-bhN"/>
@@ -705,6 +707,7 @@
                                                                     </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
                                                                     <constraint firstItem="8XG-UD-USv" firstAttribute="centerX" secondItem="FKT-fT-sES" secondAttribute="centerX" id="gTK-e2-5om"/>
                                                                     <constraint firstItem="8XG-UD-USv" firstAttribute="centerY" secondItem="FKT-fT-sES" secondAttribute="centerY" id="iHQ-zy-eho"/>
@@ -729,7 +732,7 @@
                                                         </constraints>
                                                     </view>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.12913991934746538" green="1" blue="0.8928282055544805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="dt4-gf-lST" secondAttribute="bottom" id="Avk-KS-JEx"/>
                                                     <constraint firstItem="dt4-gf-lST" firstAttribute="top" secondItem="RtV-Xl-Bhh" secondAttribute="top" id="D9b-1k-7y4"/>
@@ -834,6 +837,7 @@
                                         </variation>
                                     </view>
                                 </subviews>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="GVi-Oi-q4H" firstAttribute="height" secondItem="KV9-my-vWw" secondAttribute="height" id="1eo-fF-2XH"/>
                                     <constraint firstItem="jEJ-Ex-eba" firstAttribute="height" secondItem="KV9-my-vWw" secondAttribute="height" id="247-Y2-I9k"/>
@@ -1007,15 +1011,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Study Bolt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgm-HC-FfW">
-                                <rect key="frame" x="87.5" y="120" width="201" height="48"/>
+                                <rect key="frame" x="87" y="120" width="201" height="48"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login icon" translatesAutoresizingMaskIntoConstraints="NO" id="4eN-4x-tce">
+                                <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.44705882352941173" green="0.32156862745098036" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Qgm-HC-FfW" firstAttribute="top" secondItem="cfR-Ar-Mbz" secondAttribute="bottom" constant="100" id="GCX-uG-Ob9"/>
+                            <constraint firstItem="4eN-4x-tce" firstAttribute="centerX" secondItem="86W-lY-qP3" secondAttribute="centerX" id="Kr1-qd-jRv"/>
+                            <constraint firstItem="4eN-4x-tce" firstAttribute="centerY" secondItem="86W-lY-qP3" secondAttribute="centerY" id="SLg-ak-15h"/>
                             <constraint firstItem="Qgm-HC-FfW" firstAttribute="centerX" secondItem="86W-lY-qP3" secondAttribute="centerX" id="XVA-yR-Q4Z"/>
                         </constraints>
                     </view>
@@ -1048,6 +1057,7 @@
         <image name="Coming soon" width="48" height="48"/>
         <image name="Explore" width="25" height="25"/>
         <image name="Home" width="25" height="25"/>
+        <image name="Login icon" width="300" height="300"/>
         <image name="Setting" width="24" height="24"/>
         <image name="Study button" width="64" height="64"/>
     </resources>
