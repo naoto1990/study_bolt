@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Firebase初期化
         FirebaseApp.configure()
         
-        // Google Mobile Ads SDK初期化(テスト用IDを使用)
+        // Google Mobile Ads SDK初期化
         GADMobileAds.configure(withApplicationID: "ca-app-pub-4867873658195069~1249578080")
         
         return true
